@@ -1,0 +1,43 @@
+---
+title: Checkbox
+description: Data input that can be used in a group or individually
+img: "/images/button.svg"
+---
+
+## When to use
+
+- Used for selecting a selection from an array of options
+- Using just one checkbox is similar to using the Toggle component although the checkbox uses an Input tag that needs to be submitted
+
+## Installing
+
+Import the component
+
+```js
+@import { Checkbox } from '@supabase/ui'
+```
+
+## Basic
+
+You can use a single checkbox alone, with just a `label`. You can then use the prop `onChange` for change events.
+
+<CodeSample sample="CheckboxBasic" v="0" />
+
+## Controlled checkbox
+
+<CodeSample sample="CheckboxControlled" v="0" />
+
+## Grouped checkboxes
+
+Checkboxes allow for multiple selections so they are someties used in part of a group. You can wrap Checkboxes in a subcomponent called `<Checkbox.Group>`.
+
+You can use the `onChange` prop on either the group subcomponent or the `Checkbox` components individually.
+
+<CodeSample sample="CheckboxGrouped" v="0" />
+
+## API reference
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |

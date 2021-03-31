@@ -1,0 +1,84 @@
+---
+title: Input
+description: Basic button compoment
+img: "/images/button.svg"
+---
+
+## Installing
+
+Install the component
+
+```cli
+npm install @supabase/ui
+```
+
+## Getting started
+
+Import the component
+
+```js
+@import { Input } from '@supabase/ui'
+```
+
+## Basic
+
+An Input component will default to using `type="text"`. You can define a `label`.
+
+<CodeSample sample="InputBasic" v="0" />
+
+## Input labels
+
+You can define the type of a button using the `type` prop.
+
+There are `primary`, `default`, `secondary`, `outline`, `dashed`, and `text`.
+
+<CodeSample sample="InputLabels" v="0" />
+
+## Icon
+
+use `Icon` to inject any Icon component you like.
+
+<CodeSample sample="InputIcon" v="0" />
+
+## Copy value
+
+Use `copy` to add a copy button. It will copy the value of `value`
+
+<CodeSample sample="InputCopy" v="0" />
+
+## Reveal and copy
+
+Use `copy` to add a copy button. It will copy the value of `value`
+
+<CodeSample sample="InputReveal" v="0" />
+
+## Actions
+
+Use `actions` to inject any React.ReactNode jsx
+
+<CodeSample sample="InputControls" v="0" />
+
+## Error
+
+Use `error` with a string to show an error message
+
+<CodeSample sample="InputError" v="0" />
+
+## Text Area
+
+Use `<Input.TextArea>` to use a text area input
+
+<CodeSample sample="InputTextArea" v="0" />
+
+## Text Area with limit
+
+Use `<Input.TextArea>` to use a text area input
+
+<CodeSample sample="InputTextAreaWithLimit" v="0" />
+
+## API reference
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |

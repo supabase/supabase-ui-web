@@ -1,0 +1,55 @@
+---
+title: Radio
+description: Data input that can be used in a group or individually
+img: "/images/button.svg"
+---
+
+## When to use
+
+- Used for selecting multiple selections from an array of options
+- If using many options, it would make more sense to use a Select, or a Dropdown to faciliate the many options.
+
+## Installing
+
+Import the component
+
+```js
+@import { Radio } from '@supabase/ui'
+```
+
+## Basic
+
+You can use a single checkbox alone, with just a `label`. You can then use the prop `onChange` for change events.
+
+<CodeSample sample="RadioBasic" v="0" />
+
+## Grouped checkboxes
+
+Use the `<Radio.Group>` sub component to wrap `<Radio>` components together.
+
+You can then set the `name` and `onChange` for all the radios via the `<Radio.Group>` component.
+
+<CodeSample sample="RadioGrouped" v="0" />
+
+## Controlled checkbox
+
+### ⚠️ This doesn't work at the moment
+
+Requires value to be used in Radio.Group so that component can be controlled by React state.
+
+Also there is no DefaultValue
+
+<CodeSample sample="RadioControlled" v="0" />
+
+## Grouped radio with card styling
+
+Using the prop `type` you can change the card styling to use `cards`.
+
+<CodeSample sample="RadioGroupedCards" v="0" />
+
+## API reference
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |

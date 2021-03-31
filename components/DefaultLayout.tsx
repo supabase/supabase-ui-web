@@ -57,11 +57,22 @@ function DefaultLayout(props: any) {
           <div className="flex flex-col h-0 flex-1 border-r border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
-                <img
+                {/* <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                   alt="Workflow"
-                />
+                /> */}
+                <Link href="/" as="/">
+                  <img
+                    className="block h-6 w-auto"
+                    src={
+                      darkMode
+                        ? `/images/logo-dark.png`
+                        : `/images/logo-light.png`
+                    }
+                    alt="Logo"
+                  />
+                </Link>
               </div>
               <nav className="mt-5 pt-8 flex-1 bg-white dark:bg-gray-800 space-y-1">
                 {/* <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" --> */}
@@ -79,24 +90,75 @@ function DefaultLayout(props: any) {
                       <Menu.Item>Auth</Menu.Item>
                     </a>
                   </Link>
+                  <div className="mt-4">
+                    <Menu.Group title="Basic" />
+                  </div>
                   <Link href="/components/button" as="/components/button">
                     <a>
                       <Menu.Item>Button</Menu.Item>
                     </a>
                   </Link>
+                  <div className="mt-4">
+                    <Menu.Group title="Navigation" />
+                  </div>
                   <Link href="/components/dropdown" as="/components/dropdown">
                     <a>
                       <Menu.Item>Dropdown</Menu.Item>
                     </a>
                   </Link>
+                  <Link href="/components/menu" as="/components/menu">
+                    <a>
+                      <Menu.Item>Menu</Menu.Item>
+                    </a>
+                  </Link>
+                  <div className="mt-4">
+                    <Menu.Group title="Data input" />
+                  </div>
+                  <Link href="/components/checkbox" as="/components/checkbox">
+                    <a>
+                      <Menu.Item>Checkbox</Menu.Item>
+                    </a>
+                  </Link>
+                  <Link href="/components/select" as="/components/select">
+                    <a>
+                      <Menu.Item>Select</Menu.Item>
+                    </a>
+                  </Link>
+                  <Link href="/components/radio" as="/components/radio">
+                    <a>
+                      <Menu.Item>Radio</Menu.Item>
+                    </a>
+                  </Link>
+                  <Link href="/components/input" as="/components/input">
+                    <a>
+                      <Menu.Item>Input</Menu.Item>
+                    </a>
+                  </Link>
+                  <div className="mt-4">
+                    <Menu.Group title="Overlays" />
+                  </div>
+                  <Link href="/components/modal" as="/components/modal">
+                    <a>
+                      <Menu.Item>Modal</Menu.Item>
+                    </a>
+                  </Link>
+                  <Link href="/components/sidepanel" as="/components/sidepanel">
+                    <a>
+                      <Menu.Item>SidePanel</Menu.Item>
+                    </a>
+                  </Link>
+                </Menu>
+              </nav>
+            </div>
+            <div className=" border-t dark:border-gray-600">
+              <div className="">
+                <Menu>
                   <Menu.Item>
                     <DarkModeToggle />
                   </Menu.Item>
                 </Menu>
-              </nav>
-            </div>
-            <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
-              <a href="#" className="flex-shrink-0 w-full group block">
+              </div>
+              {/* <a href="#" className="flex-shrink-0 w-full group block">
                 <div className="flex items-center">
                   <div>
                     <img
@@ -114,7 +176,7 @@ function DefaultLayout(props: any) {
                     </p>
                   </div>
                 </div>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
