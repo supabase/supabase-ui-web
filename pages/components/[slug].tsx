@@ -10,7 +10,7 @@ import hydrate from "next-mdx-remote/hydrate";
 import { getAllPostSlugs, getPostdata } from "../../lib/posts";
 
 // import Heading from "~/../../components/heading";
-import Header from "~/../../components/Header";
+// import Header from "~/../../components/Header";
 import DefaultLayout from "~/../../components/DefaultLayout";
 
 import { IconArrowUpRight, Space, Typography } from "@supabase/ui";
@@ -23,7 +23,7 @@ import ReactMarkdown from "react-markdown";
 
 // import ButtonSample from "../../_components/button/sample";
 
-const components = { CodeSample, Header, ...ComponentIndex };
+const components = { CodeSample, ...ComponentIndex };
 
 // const components = { ButtonSample };
 

@@ -80,8 +80,9 @@ function DefaultLayout(props: any) {
                   <Link href="/">
                     <Menu.Item>Introduction</Menu.Item>
                   </Link>
-                  <Menu.Item>Installation</Menu.Item>
-                  <Menu.Item>Dark mode</Menu.Item>
+                  <Menu.Item>Installation (to do)</Menu.Item>
+                  <Menu.Item>Dark mode (to do)</Menu.Item>
+                  <Menu.Item>License (to do)</Menu.Item>
                   <div className="mt-4">
                     <Menu.Group title="Components" />
                   </div>

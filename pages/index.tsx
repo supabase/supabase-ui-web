@@ -7,14 +7,14 @@ import Head from "next/head";
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 
-import Heading from "../components/heading";
+// import Heading from "../components/heading";
 import DefaultLayout from "../components/DefaultLayout";
 
 import { Typography } from "@supabase/ui";
 
 // import { getPostdata } from "../lib/posts";
 
-const components = { Heading };
+const components = {};
 
 export default function Home({ source }: any) {
   const content = hydrate(source);

@@ -12,6 +12,7 @@
     "@next/mdx": "^10.1.1",
     "@supabase/supabase-js": "^1.7.5",
     "@supabase/ui": "^0.22.3",
+    "@types/react-copy-to-clipboard": "^5.0.0",
     "gray-matter": "^4.0.2",
     "markdown-toc": "^1.2.0",
     "next": "10.1.1",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
+    "@types/react-syntax-highlighter": "^13.5.0",
     "postcss-preset-env": "^6.7.0",
     "raw-loader": "^4.0.2",
     "tailwindcss": "^2.0.1",

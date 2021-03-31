@@ -10,66 +10,66 @@ const FILENAME_SUBSTRING = 11;
 //Finding directory named "blog" from the current working directory of Node.
 const postDirectory = path.join(process.cwd(), "_blog");
 
-export const getSortedPosts = (limit?: number, tags?: any) => {
-  //Reads all the files in the post directory
-  const fileNames = fs.readdirSync(postDirectory);
+// export const getSortedPosts = (limit?: number, tags?: any) => {
+//   //Reads all the files in the post directory
+//   const fileNames = fs.readdirSync(postDirectory);
 
-  // categories stored in this array
+//   // categories stored in this array
 
-  let allPostsData = fileNames.map((filename) => {
-    const slug = filename.replace(".mdx", "");
+//   let allPostsData = fileNames.map((filename) => {
+//     const slug = filename.replace(".mdx", "");
 
-    const fullPath = path.join(postDirectory, filename);
-    //Extracts contents of the MDX file
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data, content } = matter(fileContents);
+//     const fullPath = path.join(postDirectory, filename);
+//     //Extracts contents of the MDX file
+//     const fileContents = fs.readFileSync(fullPath, "utf8");
+//     const { data, content } = matter(fileContents);
 
-    const options = { month: "long", day: "numeric", year: "numeric" };
-    const formattedDate = new Date(data.date).toLocaleDateString(
-      "en-IN",
-      options
-    );
+//     const options = { month: "long", day: "numeric", year: "numeric" };
+//     const formattedDate = new Date(data.date).toLocaleDateString(
+//       "en-IN",
+//       options
+//     );
 
-    const readingTime = generateReadingTime(content);
-    const dates = getDatesFromFileName(filename);
+//     const readingTime = generateReadingTime(content);
+//     const dates = getDatesFromFileName(filename);
 
-    // construct url to link to blog posts
-    // based on datestamp in file name
-    const url = `${dates.year}/${dates.month}/${dates.day}/${slug.substring(
-      FILENAME_SUBSTRING
-    )}`;
+//     // construct url to link to blog posts
+//     // based on datestamp in file name
+//     const url = `${dates.year}/${dates.month}/${dates.day}/${slug.substring(
+//       FILENAME_SUBSTRING
+//     )}`;
 
-    const frontmatter = {
-      ...data,
-      date: formattedDate,
-      readingTime,
-      url: url,
-    };
-    return {
-      slug,
-      ...frontmatter,
-    };
-  });
+//     const frontmatter = {
+//       ...data,
+//       date: formattedDate,
+//       readingTime,
+//       url: url,
+//     };
+//     return {
+//       slug,
+//       ...frontmatter,
+//     };
+//   });
 
-  allPostsData = allPostsData.sort((a, b) => {
-    if (new Date(a.date) < new Date(b.date)) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+//   allPostsData = allPostsData.sort((a, b) => {
+//     if (new Date(a.date) < new Date(b.date)) {
+//       return 1;
+//     } else {
+//       return -1;
+//     }
+//   });
 
-  if (tags) {
-    allPostsData = allPostsData.filter((post: any) => {
-      const found = tags.some((tag: any) => post.tags.includes(tag));
-      return found;
-    });
-  }
+//   if (tags) {
+//     allPostsData = allPostsData.filter((post: any) => {
+//       const found = tags.some((tag: any) => post.tags.includes(tag));
+//       return found;
+//     });
+//   }
 
-  if (limit) allPostsData = allPostsData.slice(0, limit);
+//   if (limit) allPostsData = allPostsData.slice(0, limit);
 
-  return allPostsData;
-};
+//   return allPostsData;
+// };
 
 // Get Slugs
 export const getAllPostSlugs = (directory: string) => {
@@ -93,19 +93,19 @@ export const getPostdata = async (slug: string, directory: string) => {
   return postContent;
 };
 
-export const getAllCategories = () => {
-  const posts = getSortedPosts();
-  let categories: any = [];
+// export const getAllCategories = () => {
+//   const posts = getSortedPosts();
+//   let categories: any = [];
 
-  posts.map((post: any) => {
-    // add tags into categories array
-    post.tags.map((tag: string) => {
-      if (!categories.includes(tag)) return categories.push(tag);
-    });
-  });
+//   posts.map((post: any) => {
+//     // add tags into categories array
+//     post.tags.map((tag: string) => {
+//       if (!categories.includes(tag)) return categories.push(tag);
+//     });
+//   });
 
-  return categories;
-};
+//   return categories;
+// };
 
 const getDatesFromFileName = (filename: string) => {
   // extract YYYY, MM, DD from post name
