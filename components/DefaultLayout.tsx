@@ -28,14 +28,12 @@ function DefaultLayout(props: any) {
   useEffect(() => {
     const previousVisit = localStorage.getItem('supabaseDarkMode')
     const isDarkMode = previousVisit == null ? darkMode : previousVisit == 'true'
-    if (isDarkMode) {
-      setDarkMode(isDarkMode)
-      document.documentElement.className = isDarkMode ? 'dark' : 'light'
-    }
+    setDarkMode(isDarkMode)
+    document.documentElement.className = isDarkMode ? 'dark' : ''
   }, [])
 
   const updateTheme = (isDarkMode: boolean) => {
-    document.documentElement.className = isDarkMode ? 'dark' : 'light'
+    document.documentElement.className = isDarkMode ? 'dark' : ''
     setDarkMode(isDarkMode)
   }
 
