@@ -81,7 +81,7 @@ function DefaultLayout(props: any) {
               <a className="ext-link" href="https://twitter.com/supabase_io" target="_blank">
                 <span>Follow</span> <IconTwitter size="tiny" />
               </a>
-              <a className="ext-link" href="https://twitter.com/supabase_io" target="_blank">
+              <a className="ext-link" href="https://supabase.io" target="_blank">
                 <span>supabase.io</span>
               </a>
             </div>
