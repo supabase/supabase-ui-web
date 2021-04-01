@@ -1,64 +1,57 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs'
+import path from 'path'
 
-import Head from "next/head";
+import Head from 'next/head'
 // import styles from "../styles/Home.module.css";÷
 // import Introduction from "./../_posts/Introduction.mdx";
-import renderToString from "next-mdx-remote/render-to-string";
-import hydrate from "next-mdx-remote/hydrate";
+import renderToString from 'next-mdx-remote/render-to-string'
+import hydrate from 'next-mdx-remote/hydrate'
 
-import { getAllPostSlugs, getPostdata } from "../../lib/posts";
+import { getAllPostSlugs, getPostdata } from '../../lib/posts'
 
 // import Heading from "~/../../components/heading";
 // import Header from "~/../../components/Header";
-import DefaultLayout from "~/../../components/DefaultLayout";
+import DefaultLayout from '~/../../components/DefaultLayout'
 
-import {
-  Button,
-  IconAlertCircle,
-  IconEdit,
-  IconGitHub,
-  Space,
-  Typography,
-} from "@supabase/ui";
+import { Button, IconAlertCircle, IconEdit, IconGitHub, Space, Typography } from '@supabase/ui'
 
 // import { getPostdata } from "../lib/posts";
-import ComponentIndex from "../../components/ComponentIndex";
-import CodeSample from "../../components/CodeSample";
-import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
-import ComponentProps from "~/components/ComponentProps";
+import ComponentIndex from '../../components/ComponentIndex'
+import CodeSample from '../../components/CodeSample'
+import matter from 'gray-matter'
+import ReactMarkdown from 'react-markdown'
+import ComponentProps from '~/components/ComponentProps'
 
 // import ButtonSample from "../../_components/button/sample";
 
-const components = { CodeSample, ComponentProps, ...ComponentIndex };
+const components = { CodeSample, ComponentProps, ...ComponentIndex }
 
 export default function Home({ source, frontmatter, toc }: any) {
-  const gfm = require("remark-gfm");
+  const gfm = require('remark-gfm')
 
-  const content = hydrate(source, { components });
+  const content = hydrate(source, { components })
 
   const TableOfContents = toc && (
     <div className="toc">
       <Typography.Title level={5}>Contents</Typography.Title>
       <ReactMarkdown plugins={[gfm]}>{toc.content}</ReactMarkdown>
     </div>
-  );
+  )
 
   return (
     <DefaultLayout>
       <div className="grid grid-cols-12 container px-0 lg:py-8 mx-auto lg:gap-16">
         <article className="col-span-12 lg:col-span-9 xl:col-span-7">
           <Typography.Title>{frontmatter.title}</Typography.Title>
-          <Typography.Title level={3}>
+          {/* <Typography.Title level={3}>
             {frontmatter.description}
-          </Typography.Title>
+          </Typography.Title> */}
           <Typography.Text>
             <div className="my-8 text-sm">
               <div className="flex md:items-center  space-y-2 flex-col md:flex-row md:space-y-0 md:space-x-3">
                 <a
                   href={`https://github.com/supabase/ui/tree/master/src/components/${frontmatter.title}/${frontmatter.title}.tsx`}
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: 'none' }}
                 >
                   <Button type="default" iconRight={<IconGitHub />}>
                     View source
@@ -67,7 +60,7 @@ export default function Home({ source, frontmatter, toc }: any) {
 
                 <a
                   href="https://github.com/supabase/ui/issues/new/choose"
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: 'none' }}
                 >
                   <Button type="default" iconRight={<IconAlertCircle />}>
                     Report an issue
@@ -76,7 +69,7 @@ export default function Home({ source, frontmatter, toc }: any) {
 
                 <a
                   href={`https://github.com/supabase/supabase-ui-web/tree/master/_components/${frontmatter.title.toLowerCase()}/index.mdx`}
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: 'none' }}
                 >
                   <Button type="dashed" iconRight={<IconEdit />}>
                     Edit this page
@@ -95,31 +88,31 @@ export default function Home({ source, frontmatter, toc }: any) {
         </div>
       </div>
     </DefaultLayout>
-  );
+  )
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostSlugs("_components");
+  const paths = getAllPostSlugs('_components')
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
 export async function getStaticProps({ params }: any) {
   // plugins for next-mdx-remote
-  const gfm = require("remark-gfm");
-  const slug = require("rehype-slug");
+  const gfm = require('remark-gfm')
+  const slug = require('rehype-slug')
 
   // table of contents extractor
-  const toc = require("markdown-toc");
+  const toc = require('markdown-toc')
 
   //Finding directory named "blog" from the current working directory of Node.
-  const filePath = `${params.slug}/index`;
-  const postDirectory = path.join(process.cwd(), "_components");
-  const fullPath = path.join(postDirectory, `${filePath}.mdx`);
-  const fileContent = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContent);
+  const filePath = `${params.slug}/index`
+  const postDirectory = path.join(process.cwd(), '_components')
+  const fullPath = path.join(postDirectory, `${filePath}.mdx`)
+  const fileContent = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContent)
 
   const mdxSource: any = await renderToString(content, {
     components,
@@ -128,7 +121,7 @@ export async function getStaticProps({ params }: any) {
       remarkPlugins: [gfm],
       rehypePlugins: [slug],
     },
-  });
+  })
 
   return {
     props: {
@@ -138,5 +131,5 @@ export async function getStaticProps({ params }: any) {
       },
       toc: toc(content, { maxdepth: 2 }),
     },
-  };
+  }
 }

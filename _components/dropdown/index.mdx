@@ -1,7 +1,7 @@
 ---
 title: Dropdowm
 description: Basic button compoment
-img: "/images/button.svg"
+img: '/images/button.svg'
 ---
 
 ## Installing
@@ -17,50 +17,29 @@ npm install @supabase/ui
 Import the component
 
 ```js
-@import { Button } from '@supabase/ui'
+@import { Dropdown } from '@supabase/ui'
 ```
 
 ## Basic
 
-You can define the type of a button using the `type` prop. There are `primary`, `default`, `secondary`, `outline`, `dashed`, and `text`,
+Use the children of Dropdown for the trigger element that will open the dropdown. Use `overlay` to insert any react node to show in the dropdown.
+
+For the best experience, use [Menu](/components/menu) and Divider to split up the content and menu inside the Dropdown.
 
 <CodeSample sample="DropdownBasic" v="0" />
 
-## Button types
+## Placement
 
-You can define the type of a button using the `type` prop.
-
-There are `primary`, `default`, `secondary`, `outline`, `dashed`, and `text`.
+Choose where the dropdown appears with `placement`
 
 <CodeSample sample="DropdownPlacement" v="0" />
 
-## Size
+## API Reference
 
-You can define the size of a button using the `size` prop.
+#### Dropdown
 
-There are `tiny`, `small`, `medium`, `large` and `xlarge`. The default size is `tiny`
+<ComponentProps signature={`"Dropdown/Dropdown"`} />
 
-<CodeSample sample="ButtonSizes" v="0" />
+#### Dropdown.Item
 
-## Using icons
-
-Icons can be used with a Button using the `icon` prop. You can import any [Icon]("https://ui") component from Supabase UI.
-
-If you use Icons from the Supabase UI library, the Icon will respect the size of the Button. For example: if the Button is shown in Xlarge, then the Icon will be shown in XLarge.
-
-There is also support for icons on the right side of the button using `buttonRight`.
-
-<CodeSample sample="ButtonIcons" v="0" />
-
-## With block
-
-Buttons can be expanded to take the entire width of the space using the prop `block`.
-
-<CodeSample sample="ButtonBlock" v="0" />
-
-## API reference
-
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
+Coming soon
