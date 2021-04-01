@@ -16,7 +16,6 @@ import Link from 'next/link'
 
 import MenuData from 'data/Menu.json'
 
-import { getAllPostSlugs } from './../lib/posts'
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
 
@@ -60,11 +59,6 @@ function DefaultLayout(props: any) {
     <>
       <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
         <div className="flex items-center flex-shrink-0 px-4">
-          {/* <img
-        className="h-8 w-auto"
-        src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-        alt="Workflow"
-      /> */}
           <Link href="/" as="/">
             <img
               className="block h-6 w-auto"
@@ -77,10 +71,8 @@ function DefaultLayout(props: any) {
           <Badge>Alpha</Badge>
         </div>
         <nav className="pt-6 flex-1 bg-white dark:bg-gray-800 space-y-1">
-          {/* <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" --> */}
           <Menu>
             <div className="flex flex-col px-4 space-y-2 mb-4">
-              {/* <Typography.Text small type="secondary"> */}
               <a className="ext-link" href="https://github.com/supabase/ui" target="_blank">
                 <span>GitHub</span> <IconGitHub size="tiny" />
               </a>
@@ -101,7 +93,6 @@ function DefaultLayout(props: any) {
             </Link>
             <Divider light className="mt-4" />
             {Object.values(MenuData).map((menu: any, i) => {
-              // return <span>{menu}</span>;
               const title = Object.keys(MenuData)[i]
               return (
                 <>
