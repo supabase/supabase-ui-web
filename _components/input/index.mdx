@@ -24,13 +24,17 @@ Import the component
 
 An Input component will default to using `type="text"`. You can define a `label`.
 
+`type` can be used to show what kind of input you need. It supports all Input types, except for the following:
+
+- Number, use [InputNumber](/components/inputnumber)
+- Radio, use [Radio](/components/radio)
+- Checkbox, use [Checkbox](/components/checkbox)
+
 <CodeSample sample="InputBasic" v="0" />
 
 ## Input labels
 
-You can define the type of a button using the `type` prop.
-
-There are `primary`, `default`, `secondary`, `outline`, `dashed`, and `text`.
+You can use `label`, `descriptionText` and `labelOptional` to illustrate what your Input is for and demonstrate to the user what they need to input.
 
 <CodeSample sample="InputLabels" v="0" />
 
@@ -76,9 +80,12 @@ Use `<Input.TextArea>` to use a text area input
 
 <CodeSample sample="InputTextAreaWithLimit" v="0" />
 
-## API reference
+## API Reference
 
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
+#### Input
+
+<ComponentProps signature={`"Input/Input"`} />
+
+#### Input.TextArea
+
+Coming soon

@@ -41,7 +41,11 @@ export default function Parameters({ signature }: ParametersParams) {
               </td>
               {/* <td>{x.flags.optional ? "true" : "false"}</td> */}
               <td className="PropsTable__Type">
-                <Badge color="brand">{x.type.name}</Badge>
+                {x.type && x.type.name ? (
+                  <Badge color="green">{x.type.name}</Badge>
+                ) : (
+                  "TBC"
+                )}
               </td>
             </tr>
           ))}
