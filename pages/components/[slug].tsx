@@ -13,7 +13,14 @@ import { getAllPostSlugs, getPostdata } from "../../lib/posts";
 // import Header from "~/../../components/Header";
 import DefaultLayout from "~/../../components/DefaultLayout";
 
-import { IconArrowUpRight, Space, Typography } from "@supabase/ui";
+import {
+  Button,
+  IconAlertCircle,
+  IconEdit,
+  IconGitHub,
+  Space,
+  Typography,
+} from "@supabase/ui";
 
 // import { getPostdata } from "../lib/posts";
 import ComponentIndex from "../../components/ComponentIndex";
@@ -47,7 +54,7 @@ export default function Home({ source, frontmatter, toc }: any) {
 
   return (
     <DefaultLayout>
-      <div className="grid grid-cols-12 container px-8 lg:py-16 mx-auto">
+      <div className="grid grid-cols-12 container px-8 lg:py-8 mx-auto">
         <article className="col-span-7">
           <Typography.Title>{frontmatter.title}</Typography.Title>
           <Typography.Title level={3}>
@@ -55,29 +62,34 @@ export default function Home({ source, frontmatter, toc }: any) {
           </Typography.Title>
           <Typography.Text>
             <div className="my-8 text-sm">
-              <a
-                href="https://github.com/supabase/ui"
-                style={{ textDecoration: "none" }}
-              >
-                <Space>
-                  <span>View source</span>
-                  <Typography.Text type="secondary">
-                    <IconArrowUpRight strokeWidth={1.5} size="tiny" />
-                  </Typography.Text>
-                </Space>
-              </a>
+              <Space>
+                <a
+                  href="https://github.com/supabase/ui"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button type="default" iconRight={<IconGitHub />}>
+                    View source
+                  </Button>
+                </a>
 
-              <a
-                href="https://github.com/supabase/ui"
-                style={{ textDecoration: "none" }}
-              >
-                <Space>
-                  <span>Report an issue</span>
-                  <Typography.Text type="secondary">
-                    <IconArrowUpRight strokeWidth={1.5} size="tiny" />
-                  </Typography.Text>
-                </Space>
-              </a>
+                <a
+                  href="https://github.com/supabase/ui"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button type="default" iconRight={<IconAlertCircle />}>
+                    Report an issue
+                  </Button>
+                </a>
+
+                <a
+                  href="https://github.com/supabase/ui"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button type="text" iconRight={<IconEdit />}>
+                    Edit this page
+                  </Button>
+                </a>
+              </Space>
             </div>
           </Typography.Text>
           {/* <Header img={frontmatter.img} /> */}
