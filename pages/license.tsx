@@ -51,7 +51,7 @@ export async function getStaticProps() {
   const toc = require("markdown-toc");
 
   //Finding directory named "blog" from the current working directory of Node.
-  const filePath = `Introduction`;
+  const filePath = `License`;
   const postDirectory = path.join(process.cwd(), "_posts");
   const fullPath = path.join(postDirectory, `${filePath}.mdx`);
   const fileContent = fs.readFileSync(fullPath, "utf8");

@@ -33,13 +33,9 @@ import ComponentProps from "~/components/ComponentProps";
 
 const components = { CodeSample, ComponentProps, ...ComponentIndex };
 
-// const components = { ButtonSample };
-
 export default function Home({ source, frontmatter, toc }: any) {
   const gfm = require("remark-gfm");
 
-  console.log("frontmatter", frontmatter);
-  // console.log("toc", toc);
   const content = hydrate(source, { components });
 
   const TableOfContents = toc && (
@@ -51,7 +47,7 @@ export default function Home({ source, frontmatter, toc }: any) {
 
   return (
     <DefaultLayout>
-      <div className="grid grid-cols-12 container px-0 lg:py-8 mx-auto lg:gap-8 ">
+      <div className="grid grid-cols-12 container px-0 lg:py-8 mx-auto lg:gap-16">
         <article className="col-span-12 lg:col-span-9 xl:col-span-7">
           <Typography.Title>{frontmatter.title}</Typography.Title>
           <Typography.Title level={3}>
@@ -79,7 +75,7 @@ export default function Home({ source, frontmatter, toc }: any) {
                 </a>
 
                 <a
-                  href={`https://github.com/mildtomato/supabase-ui-web/tree/master/_components/${frontmatter.title.toLowerCase()}/index.mdx`}
+                  href={`https://github.com/supabase/supabase-ui-web/tree/master/_components/${frontmatter.title.toLowerCase()}/index.mdx`}
                   style={{ textDecoration: "none" }}
                 >
                   <Button type="dashed" iconRight={<IconEdit />}>

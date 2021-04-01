@@ -1,9 +1,12 @@
 import {
   Badge,
+  Button,
   Divider,
+  IconArrowUpRight,
   IconGitHub,
   IconMoon,
   IconSun,
+  IconTwitter,
   Menu,
   Space,
   Typography,
@@ -76,21 +79,38 @@ function DefaultLayout(props: any) {
         <nav className="pt-6 flex-1 bg-white dark:bg-gray-800 space-y-1">
           {/* <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" --> */}
           <Menu>
+            <div className="flex flex-col px-4 space-y-2 mb-4">
+              {/* <Typography.Text small type="secondary"> */}
+              <a
+                className="ext-link"
+                href="https://github.com/supabase/ui"
+                target="_blank"
+              >
+                <span>GitHub</span> <IconGitHub size="tiny" />
+              </a>
+              <a
+                className="ext-link"
+                href="https://twitter.com/supabase_io"
+                target="_blank"
+              >
+                <span>Follow</span> <IconTwitter size="tiny" />
+              </a>
+              <a
+                className="ext-link"
+                href="https://twitter.com/supabase_io"
+                target="_blank"
+              >
+                <span>supabase.io</span>
+              </a>
+            </div>
             <Link href="/">
               <Menu.Item>Introduction</Menu.Item>
             </Link>
-            <Menu.Item>Installation (to do)</Menu.Item>
-            <Menu.Item>Dark mode (to do)</Menu.Item>
-            <Menu.Item>License (to do)</Menu.Item>
-            <div className="flex flex-col px-4 space-y-2 my-4">
-              <Typography.Text small type="secondary">
-                See GitHub <IconGitHub />
-              </Typography.Text>
-
-              <Typography.Text small type="secondary">
-                Follow Supabase
-              </Typography.Text>
-            </div>
+            <Menu.Item>Dark mode setup (coming soon)</Menu.Item>
+            <Menu.Item>Themeing (coming soon)</Menu.Item>
+            <Link href="/license">
+              <Menu.Item>License</Menu.Item>
+            </Link>
             <Divider light className="mt-4" />
             {Object.values(MenuData).map((menu: any, i) => {
               // return <span>{menu}</span>;
