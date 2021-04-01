@@ -106,9 +106,11 @@ function DefaultLayout(props: any) {
             <Link href="/">
               <Menu.Item>Introduction</Menu.Item>
             </Link>
-            <Menu.Item>Installation (to do)</Menu.Item>
-            <Menu.Item>Dark mode (to do)</Menu.Item>
-            <Menu.Item>License (to do)</Menu.Item>
+            <Menu.Item>Dark mode setup (coming soon)</Menu.Item>
+            <Menu.Item>Themeing (coming soon)</Menu.Item>
+            <Link href="/license">
+              <Menu.Item>License</Menu.Item>
+            </Link>
             <Divider light className="mt-4" />
             {Object.values(MenuData).map((menu: any, i) => {
               // return <span>{menu}</span>;
