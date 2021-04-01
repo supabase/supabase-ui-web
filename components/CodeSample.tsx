@@ -4,7 +4,7 @@ import ComponentIndex, { RawComponents } from "./ComponentIndex";
 // /* eslint import/no-webpack-loader-syntax: off */
 import CodeBlock from "./CodeBlock/CodeBlock";
 
-import Frame from "react-frame-component";
+// import Frame from "react-frame-component";
 
 interface Props {
   children: any;
