@@ -1,8 +1,8 @@
 import {
+  Modal,
   Badge,
   Button,
   IconTrash,
-  SidePanel,
   Space,
   Typography,
 } from "@supabase/ui";
@@ -17,9 +17,9 @@ export default function SidePanelFooterCustom() {
   return (
     <>
       <Button type="default" onClick={toggle}>
-        Open sidepanel
+        Open modal
       </Button>
-      <SidePanel
+      <Modal
         visible={visible}
         title="Title of the sidepanel"
         onCancel={toggle}
@@ -34,7 +34,7 @@ export default function SidePanelFooterCustom() {
         ]}
       >
         <Typography.Text>This is the content of the sidepanel</Typography.Text>
-      </SidePanel>
+      </Modal>
     </>
   );
 }
