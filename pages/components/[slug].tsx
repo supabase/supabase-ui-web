@@ -64,7 +64,7 @@ export default function Home({ source, frontmatter, toc }: any) {
             <div className="my-8 text-sm">
               <Space>
                 <a
-                  href="https://github.com/supabase/ui"
+                  href={`https://github.com/supabase/ui/tree/master/src/components/${frontmatter.title}/${frontmatter.title}.tsx`}
                   style={{ textDecoration: "none" }}
                 >
                   <Button type="default" iconRight={<IconGitHub />}>
@@ -73,7 +73,7 @@ export default function Home({ source, frontmatter, toc }: any) {
                 </a>
 
                 <a
-                  href="https://github.com/supabase/ui"
+                  href="https://github.com/supabase/ui/issues/new/choose"
                   style={{ textDecoration: "none" }}
                 >
                   <Button type="default" iconRight={<IconAlertCircle />}>
@@ -82,7 +82,7 @@ export default function Home({ source, frontmatter, toc }: any) {
                 </a>
 
                 <a
-                  href="https://github.com/supabase/ui"
+                  href={`https://github.com/mildtomato/supabase-ui-web/tree/master/_components/${frontmatter.title.toLowerCase()}/index.mdx`}
                   style={{ textDecoration: "none" }}
                 >
                   <Button type="text" iconRight={<IconEdit />}>
