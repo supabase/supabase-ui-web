@@ -54,7 +54,7 @@ export default function Home({ source, frontmatter, toc }: any) {
 
   return (
     <DefaultLayout>
-      <div className="grid grid-cols-12 container px-8 lg:py-8 mx-auto">
+      <div className="grid grid-cols-12 container px-0 lg:py-8 mx-auto">
         <article className="col-span-12 lg:col-span-7">
           <Typography.Title>{frontmatter.title}</Typography.Title>
           <Typography.Title level={3}>
@@ -62,7 +62,7 @@ export default function Home({ source, frontmatter, toc }: any) {
           </Typography.Title>
           <Typography.Text>
             <div className="my-8 text-sm">
-              <Space>
+              <div className="flex md:items-center  space-y-2 flex-col md:flex-row md:space-y-0 md:space-x-3">
                 <a
                   href={`https://github.com/supabase/ui/tree/master/src/components/${frontmatter.title}/${frontmatter.title}.tsx`}
                   style={{ textDecoration: "none" }}
@@ -85,11 +85,11 @@ export default function Home({ source, frontmatter, toc }: any) {
                   href={`https://github.com/mildtomato/supabase-ui-web/tree/master/_components/${frontmatter.title.toLowerCase()}/index.mdx`}
                   style={{ textDecoration: "none" }}
                 >
-                  <Button type="text" iconRight={<IconEdit />}>
+                  <Button type="dashed" iconRight={<IconEdit />}>
                     Edit this page
                   </Button>
                 </a>
-              </Space>
+              </div>
             </div>
           </Typography.Text>
           {/* <Header img={frontmatter.img} /> */}
