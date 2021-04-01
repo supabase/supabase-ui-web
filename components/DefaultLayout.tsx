@@ -125,6 +125,14 @@ function DefaultLayout(props: any) {
                       <Menu.Item>Button</Menu.Item>
                     </a>
                   </Link>
+                  <Link
+                    href="/components/typography"
+                    as="/components/typography"
+                  >
+                    <a>
+                      <Menu.Item>Typography</Menu.Item>
+                    </a>
+                  </Link>
                   <div className="mt-4">
                     <Menu.Group title="Navigation" />
                   </div>

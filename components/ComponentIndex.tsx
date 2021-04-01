@@ -151,6 +151,12 @@ import CardCoverRaw from "!!raw-loader!./../_components/card/CardCover";
 import CardMetaRaw from "!!raw-loader!./../_components/card/CardMeta";
 import CardHoverableRaw from "!!raw-loader!./../_components/card/CardHoverable";
 
+import TypographyTitles from "../_components/typography/TypographyTitles";
+import TypographyText from "../_components/typography/TypographyText";
+
+import TypographyTitlesRaw from "!!raw-loader!./../_components/typography/TypographyTitles";
+import TypographyTextRaw from "!!raw-loader!./../_components/typography/TypographyText";
+
 let Components: any = {};
 let RawComponents: any = {};
 
@@ -339,6 +345,14 @@ RawComponents["CardBasic"] = CardBasicRaw;
 RawComponents["CardCover"] = CardCoverRaw;
 RawComponents["CardMeta"] = CardMetaRaw;
 RawComponents["CardHoverable"] = CardHoverableRaw;
+
+// Typography
+
+Components["TypographyTitles"] = TypographyTitles;
+Components["TypographyText"] = TypographyText;
+
+RawComponents["TypographyTitles"] = TypographyTitlesRaw;
+RawComponents["TypographyText"] = TypographyTextRaw;
 
 export default Components;
 export { RawComponents };
