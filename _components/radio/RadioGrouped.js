@@ -12,7 +12,7 @@ export default function RadioGrouped() {
       onChange={handleOnChange}
     >
       <Radio
-        label="Frist Radio"
+        label="First Radio"
         description="The value of this Radio is controlled by a react state"
       />
       <Radio

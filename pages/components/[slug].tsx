@@ -28,17 +28,11 @@ import CodeSample from "../../components/CodeSample";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
-// import ButtonSample from "../../_components/button/sample";
-
 const components = { CodeSample, ...ComponentIndex };
-
-// const components = { ButtonSample };
 
 export default function Home({ source, frontmatter, toc }: any) {
   const gfm = require("remark-gfm");
 
-  // console.log("frontmatter", frontmatter);
-  // console.log("toc", toc);
   const content = hydrate(source, { components });
 
   const TableOfContents = toc && (
@@ -78,7 +72,7 @@ export default function Home({ source, frontmatter, toc }: any) {
                 </a>
 
                 <a
-                  href={`https://github.com/mildtomato/supabase-ui-web/tree/master/_components/${frontmatter.title.toLowerCase()}/index.mdx`}
+                  href={`https://github.com/supabase/supabase-ui-web/tree/master/_components/${frontmatter.title.toLowerCase()}/index.mdx`}
                   style={{ textDecoration: "none" }}
                 >
                   <Button type="dashed" iconRight={<IconEdit />}>

@@ -96,5 +96,11 @@ body {
 }
 
 .toc li {
-  @apply font-normal text-base mb-2 dark:text-gray-300;
+  @apply font-normal text-base mb-2 dark:text-gray-300  dark:hover:text-gray-400;
+}
+
+/* Links */
+
+.ext-link {
+  @apply cursor-pointer text-sm dark:text-gray-400 dark:hover:text-white flex items-center space-x-1;
 }
