@@ -14,6 +14,8 @@ import {
 import Nav from './Nav'
 import Link from 'next/link'
 
+import { DefaultSeo } from 'next-seo'
+
 import MenuData from 'data/Menu.json'
 
 import { useEffect, useState } from 'react'
@@ -129,13 +131,33 @@ function DefaultLayout(props: any) {
     </>
   )
 
+  const site_title = 'Supabase UI'
+  const site_description = 'An open-source UI component library inspired by Tailwind and AntDesign.'
+
   return (
     <>
-      <Head>
-        <title>Supabase UI</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:image" content={'https://ui.supabase.io/og.jpg'} key="ogimage" />
-      </Head>
+      <DefaultSeo
+        title={site_title}
+        description={site_description}
+        openGraph={{
+          type: 'website',
+          url: 'https://ui.supabase.io/',
+          site_name: site_title,
+          images: [
+            {
+              url: `https://ui.supabase.io/og.jpg`,
+              width: 800,
+              height: 600,
+              alt: 'Supabase Og Image',
+            },
+          ],
+        }}
+        twitter={{
+          handle: '@supabase_io',
+          site: '@supabase_io',
+          cardType: 'summary_large_image',
+        }}
+      />
       <div className="h-screen flex overflow-hidden bg-white dark:bg-gray-800">
         <Nav
           contents={contents}
