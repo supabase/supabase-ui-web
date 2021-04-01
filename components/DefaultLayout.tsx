@@ -1,6 +1,8 @@
 import {
   Badge,
+  Button,
   Divider,
+  IconArrowUpRight,
   IconGitHub,
   IconMoon,
   IconSun,
@@ -92,6 +94,13 @@ function DefaultLayout(props: any) {
                 target="_blank"
               >
                 <span>Follow</span> <IconTwitter size="tiny" />
+              </a>
+              <a
+                className="ext-link"
+                href="https://twitter.com/supabase_io"
+                target="_blank"
+              >
+                <span>supabase.io</span>
               </a>
             </div>
             <Link href="/">

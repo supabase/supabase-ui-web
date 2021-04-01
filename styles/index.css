@@ -92,15 +92,23 @@ body {
 /* table of contents */
 
 .toc h5 {
-  @apply font-normal text-sm dark:text-gray-400 dark:hover:text-white;
+  @apply font-normal text-xs text-gray-300 dark:text-gray-400;
 }
 
 .toc li {
-  @apply font-normal text-base mb-2 dark:text-gray-300  dark:hover:text-gray-400;
+  @apply font-normal text-sm mb-2 text-gray-400 hover:text-gray-500 dark:text-gray-300  dark:hover:text-gray-200;
+}
+
+.toc li a {
+  @apply border-b border-transparent;
+}
+
+.toc li a:hover {
+  @apply border-b border-gray-600 dark:border-gray-100;
 }
 
 /* Links */
 
 .ext-link {
-  @apply cursor-pointer text-sm dark:text-gray-400 dark:hover:text-white flex items-center space-x-1;
+  @apply cursor-pointer text-sm text-gray-300 hover:text-gray-400 dark:text-gray-400 dark:hover:text-white flex items-center space-x-1;
 }
