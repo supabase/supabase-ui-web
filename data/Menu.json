@@ -1,6 +1,6 @@
 {
   "Supabase connected": ["Auth"],
-  "General": ["Button", "Typograpy"],
+  "General": ["Button", "Typography"],
   "Data input": ["Input", "InputNumber", "Select", "Radio", "Checkbox"],
   "Navigation": ["Menu", "Tabs"],
   "Display": ["Dropdown", "Badge", "Card", "Alert"],
