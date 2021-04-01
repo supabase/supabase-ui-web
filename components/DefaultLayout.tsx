@@ -10,48 +10,49 @@ import {
   Menu,
   Space,
   Typography,
-} from "@supabase/ui";
-import Nav from "./Nav";
-import Link from "next/link";
+} from '@supabase/ui'
+import Nav from './Nav'
+import Link from 'next/link'
 
-import MenuData from "data/Menu.json";
+import MenuData from 'data/Menu.json'
 
-import { getAllPostSlugs } from "./../lib/posts";
-import { useEffect, useState } from "react";
+import { getAllPostSlugs } from './../lib/posts'
+import { useEffect, useState } from 'react'
 
 function DefaultLayout(props: any) {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(true)
+  const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false)
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("supabaseDarkMode");
+    const previousVisit = localStorage.getItem('supabaseDarkMode')
+    const isDarkMode = previousVisit == null ? darkMode : previousVisit == 'true'
     if (isDarkMode) {
-      setDarkMode(isDarkMode === "true");
-      document.documentElement.className = isDarkMode === "true" ? "dark" : "";
+      setDarkMode(isDarkMode)
+      document.documentElement.className = isDarkMode ? 'dark' : 'light'
     }
-  }, []);
+  }, [])
 
   const updateTheme = (isDarkMode: boolean) => {
-    document.documentElement.className = isDarkMode ? "dark" : "";
-    setDarkMode(isDarkMode);
-  };
+    document.documentElement.className = isDarkMode ? 'dark' : 'light'
+    setDarkMode(isDarkMode)
+  }
 
   function DarkModeToggle() {
     const toggleDarkMode = () => {
-      localStorage.setItem("supabaseDarkMode", (!darkMode).toString());
-      updateTheme(!darkMode);
-    };
+      localStorage.setItem('supabaseDarkMode', (!darkMode).toString())
+      updateTheme(!darkMode)
+    }
 
     return (
       <span onClick={() => toggleDarkMode()} className="cursor-pointer">
         <Typography.Text>
           <Space className="justify-between">
-            {darkMode ? "Light Mode" : "Dark mode"}
+            {darkMode ? 'Light Mode' : 'Dark mode'}
             {darkMode ? <IconSun /> : <IconMoon />}
           </Space>
         </Typography.Text>
       </span>
-    );
+    )
   }
 
   const contents = (
@@ -66,9 +67,7 @@ function DefaultLayout(props: any) {
           <Link href="/" as="/">
             <img
               className="block h-6 w-auto"
-              src={
-                darkMode ? `/images/logo-dark.png` : `/images/logo-light.png`
-              }
+              src={darkMode ? `/images/logo-dark.png` : `/images/logo-light.png`}
               alt="Logo"
             />
           </Link>
@@ -81,25 +80,13 @@ function DefaultLayout(props: any) {
           <Menu>
             <div className="flex flex-col px-4 space-y-2 mb-4">
               {/* <Typography.Text small type="secondary"> */}
-              <a
-                className="ext-link"
-                href="https://github.com/supabase/ui"
-                target="_blank"
-              >
+              <a className="ext-link" href="https://github.com/supabase/ui" target="_blank">
                 <span>GitHub</span> <IconGitHub size="tiny" />
               </a>
-              <a
-                className="ext-link"
-                href="https://twitter.com/supabase_io"
-                target="_blank"
-              >
+              <a className="ext-link" href="https://twitter.com/supabase_io" target="_blank">
                 <span>Follow</span> <IconTwitter size="tiny" />
               </a>
-              <a
-                className="ext-link"
-                href="https://twitter.com/supabase_io"
-                target="_blank"
-              >
+              <a className="ext-link" href="https://twitter.com/supabase_io" target="_blank">
                 <span>supabase.io</span>
               </a>
             </div>
@@ -114,7 +101,7 @@ function DefaultLayout(props: any) {
             <Divider light className="mt-4" />
             {Object.values(MenuData).map((menu: any, i) => {
               // return <span>{menu}</span>;
-              const title = Object.keys(MenuData)[i];
+              const title = Object.keys(MenuData)[i]
               return (
                 <>
                   <div className="mt-4">
@@ -130,10 +117,10 @@ function DefaultLayout(props: any) {
                           <Menu.Item>{menu}</Menu.Item>
                         </a>
                       </Link>
-                    );
+                    )
                   })}
                 </>
-              );
+              )
             })}
           </Menu>
         </nav>
@@ -148,7 +135,7 @@ function DefaultLayout(props: any) {
         </div>
       </div>
     </>
-  );
+  )
 
   return (
     // <div className="container">
@@ -199,19 +186,14 @@ function DefaultLayout(props: any) {
             </svg>
           </button>
         </div>
-        <main
-          className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
-          tabIndex={0}
-        >
+        <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabIndex={0}>
           <div className="py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              {props.children}
-            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">{props.children}</div>
           </div>
         </main>
       </div>
     </div>
-  );
+  )
 }
 
-export default DefaultLayout;
+export default DefaultLayout
