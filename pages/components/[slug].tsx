@@ -55,7 +55,7 @@ export default function Home({ source, frontmatter, toc }: any) {
   return (
     <DefaultLayout>
       <div className="grid grid-cols-12 container px-8 lg:py-8 mx-auto">
-        <article className="col-span-7">
+        <article className="col-span-12 lg:col-span-7">
           <Typography.Title>{frontmatter.title}</Typography.Title>
           <Typography.Title level={3}>
             {frontmatter.description}
@@ -97,7 +97,9 @@ export default function Home({ source, frontmatter, toc }: any) {
             <Typography>{content}</Typography>
           </div>
         </article>
-        <div className="col-span-2 col-start-11">{TableOfContents}</div>
+        <div className="hidden lg:block col-span-2 col-start-11">
+          {TableOfContents}
+        </div>
       </div>
     </DefaultLayout>
   );
