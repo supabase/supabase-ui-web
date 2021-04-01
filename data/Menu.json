@@ -1,0 +1,8 @@
+{
+  "Supabase connected": ["Auth"],
+  "General": ["Button", "Typograpy"],
+  "Data input": ["Input", "InputNumber", "Select", "Radio", "Checkbox"],
+  "Navigation": ["Menu", "Tabs"],
+  "Display": ["Dropdown", "Badge", "Card", "Alert"],
+  "Overlay": ["Modal", "SidePanel"]
+}

@@ -157,6 +157,10 @@ import TypographyText from "../_components/typography/TypographyText";
 import TypographyTitlesRaw from "!!raw-loader!./../_components/typography/TypographyTitles";
 import TypographyTextRaw from "!!raw-loader!./../_components/typography/TypographyText";
 
+import AlertBasic from "../_components/alert/AlertBasic";
+
+import AlertBasicRaw from "!!raw-loader!./../_components/alert/AlertBasic";
+
 let Components: any = {};
 let RawComponents: any = {};
 
@@ -353,6 +357,12 @@ Components["TypographyText"] = TypographyText;
 
 RawComponents["TypographyTitles"] = TypographyTitlesRaw;
 RawComponents["TypographyText"] = TypographyTextRaw;
+
+// Alert
+
+Components["AlertBasic"] = AlertBasic;
+
+RawComponents["AlertBasic"] = AlertBasicRaw;
 
 export default Components;
 export { RawComponents };

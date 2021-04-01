@@ -9,6 +9,8 @@ import {
 import Nav from "./Nav";
 import Link from "next/link";
 
+import MenuData from "data/Menu.json";
+
 import { getAllPostSlugs } from "./../lib/posts";
 import { useEffect, useState } from "react";
 
@@ -94,102 +96,30 @@ function DefaultLayout(props: any) {
                   <Menu.Item>Installation (to do)</Menu.Item>
                   <Menu.Item>Dark mode (to do)</Menu.Item>
                   <Menu.Item>License (to do)</Menu.Item>
-                  <div className="mt-4">
-                    <Menu.Group title="Components" />
-                  </div>
-                  <Link href="/components/tabs" as="/components/tabs">
-                    <a>
-                      <Menu.Item>Tabs</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/card" as="/components/card">
-                    <a>
-                      <Menu.Item>Card</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/badge" as="/components/badge">
-                    <a>
-                      <Menu.Item>Badge</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/auth" as="/components/auth">
-                    <a>
-                      <Menu.Item>Auth</Menu.Item>
-                    </a>
-                  </Link>
-                  <div className="mt-4">
-                    <Menu.Group title="Basic" />
-                  </div>
-                  <Link href="/components/button" as="/components/button">
-                    <a>
-                      <Menu.Item>Button</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link
-                    href="/components/typography"
-                    as="/components/typography"
-                  >
-                    <a>
-                      <Menu.Item>Typography</Menu.Item>
-                    </a>
-                  </Link>
-                  <div className="mt-4">
-                    <Menu.Group title="Navigation" />
-                  </div>
-                  <Link href="/components/dropdown" as="/components/dropdown">
-                    <a>
-                      <Menu.Item>Dropdown</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/menu" as="/components/menu">
-                    <a>
-                      <Menu.Item>Menu</Menu.Item>
-                    </a>
-                  </Link>
-                  <div className="mt-4">
-                    <Menu.Group title="Data input" />
-                  </div>
-                  <Link
-                    href="/components/inputnumber"
-                    as="/components/inputnumber"
-                  >
-                    <a>
-                      <Menu.Item>InputNumber</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/checkbox" as="/components/checkbox">
-                    <a>
-                      <Menu.Item>Checkbox</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/select" as="/components/select">
-                    <a>
-                      <Menu.Item>Select</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/radio" as="/components/radio">
-                    <a>
-                      <Menu.Item>Radio</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/input" as="/components/input">
-                    <a>
-                      <Menu.Item>Input</Menu.Item>
-                    </a>
-                  </Link>
-                  <div className="mt-4">
-                    <Menu.Group title="Overlays" />
-                  </div>
-                  <Link href="/components/modal" as="/components/modal">
-                    <a>
-                      <Menu.Item>Modal</Menu.Item>
-                    </a>
-                  </Link>
-                  <Link href="/components/sidepanel" as="/components/sidepanel">
-                    <a>
-                      <Menu.Item>SidePanel</Menu.Item>
-                    </a>
-                  </Link>
+
+                  {Object.values(MenuData).map((menu: any, i) => {
+                    // return <span>{menu}</span>;
+                    const title = Object.keys(MenuData)[i];
+                    return (
+                      <>
+                        <div className="mt-4">
+                          <Menu.Group title={title} />
+                        </div>
+                        {menu.map((menu: any) => {
+                          return (
+                            <Link
+                              href={`/components/${menu.toLowerCase()}`}
+                              as={`/components/${menu.toLowerCase()}`}
+                            >
+                              <a>
+                                <Menu.Item>{menu}</Menu.Item>
+                              </a>
+                            </Link>
+                          );
+                        })}
+                      </>
+                    );
+                  })}
                 </Menu>
               </nav>
             </div>
