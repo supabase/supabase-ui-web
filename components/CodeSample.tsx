@@ -13,7 +13,7 @@ interface Props {
 }
 
 function CodeSample(props: Props) {
-  console.log(props.sample);
+  // console.log(props.sample);
 
   // @ts-ignore
   const Sample = ComponentIndex[props.sample];
@@ -23,11 +23,11 @@ function CodeSample(props: Props) {
   if (!process.browser) {
     return <span>Loading</span>;
   } else {
-    console.log("hello");
+    // console.log("hello");
     if (document) {
       // const head = document.head;
 
-      console.log(document.head.innerHTML);
+      // console.log(document.head.innerHTML);
       // @ts-ignore
       // console.log(typeof head);
       // @ts-ignore

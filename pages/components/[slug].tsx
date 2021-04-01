@@ -27,8 +27,11 @@ import ComponentIndex from "../../components/ComponentIndex";
 import CodeSample from "../../components/CodeSample";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import ComponentProps from "~/components/ComponentProps";
 
-const components = { CodeSample, ...ComponentIndex };
+// import ButtonSample from "../../_components/button/sample";
+
+const components = { CodeSample, ComponentProps, ...ComponentIndex };
 
 export default function Home({ source, frontmatter, toc }: any) {
   const gfm = require("remark-gfm");
