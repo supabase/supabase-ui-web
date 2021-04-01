@@ -79,11 +79,6 @@ h2 {
   @apply border dark:border-gray-600;
 }
 
-/* p {
-  @apply text-gray-light dark:text-gray-dark;
-  margin-bottom: 16px;
-} */
-
 .sbui-border-fix select {
   @apply border-solid;
   border-width: 1px;
@@ -92,4 +87,14 @@ h2 {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* table of contents */
+
+.toc h5 {
+  @apply font-normal text-sm dark:text-gray-400 dark:hover:text-white;
+}
+
+.toc li {
+  @apply font-normal text-base mb-2 dark:text-gray-300;
 }

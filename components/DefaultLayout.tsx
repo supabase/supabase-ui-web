@@ -1,5 +1,7 @@
 import {
   Badge,
+  Divider,
+  IconGitHub,
   IconMoon,
   IconSun,
   Menu,
@@ -73,7 +75,6 @@ function DefaultLayout(props: any) {
         </div>
         <nav className="pt-6 flex-1 bg-white dark:bg-gray-800 space-y-1">
           {/* <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" --> */}
-
           <Menu>
             <Link href="/">
               <Menu.Item>Introduction</Menu.Item>
@@ -81,7 +82,16 @@ function DefaultLayout(props: any) {
             <Menu.Item>Installation (to do)</Menu.Item>
             <Menu.Item>Dark mode (to do)</Menu.Item>
             <Menu.Item>License (to do)</Menu.Item>
+            <div className="flex flex-col px-4 space-y-2 my-4">
+              <Typography.Text small type="secondary">
+                See GitHub <IconGitHub />
+              </Typography.Text>
 
+              <Typography.Text small type="secondary">
+                Follow Supabase
+              </Typography.Text>
+            </div>
+            <Divider light className="mt-4" />
             {Object.values(MenuData).map((menu: any, i) => {
               // return <span>{menu}</span>;
               const title = Object.keys(MenuData)[i];
@@ -148,7 +158,7 @@ function DefaultLayout(props: any) {
         <div className="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
           <button
             onClick={() => setShowMobileMenu(!showMobileMenu)}
-            className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-200 hover:text-gray-300 dark:text-gray-500 dark:hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           >
             <span className="sr-only">Open sidebar</span>
             {/* <!-- Heroicon name: outline/menu --> */}

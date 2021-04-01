@@ -42,14 +42,10 @@ export default function Home({ source, frontmatter, toc }: any) {
   const content = hydrate(source, { components });
 
   const TableOfContents = toc && (
-    <Space direction="vertical" size={8} className="py-8 lg:py-0">
-      <div>
-        <Typography>
-          <Typography.Title level={5}>Table of contents</Typography.Title>
-          <ReactMarkdown plugins={[gfm]}>{toc.content}</ReactMarkdown>
-        </Typography>
-      </div>
-    </Space>
+    <div className="toc">
+      <Typography.Title level={5}>Contents</Typography.Title>
+      <ReactMarkdown plugins={[gfm]}>{toc.content}</ReactMarkdown>
+    </div>
   );
 
   return (
