@@ -27,17 +27,18 @@ import ComponentIndex from "../../components/ComponentIndex";
 import CodeSample from "../../components/CodeSample";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import ComponentProps from "~/components/ComponentProps";
 
 // import ButtonSample from "../../_components/button/sample";
 
-const components = { CodeSample, ...ComponentIndex };
+const components = { CodeSample, ComponentProps, ...ComponentIndex };
 
 // const components = { ButtonSample };
 
 export default function Home({ source, frontmatter, toc }: any) {
   const gfm = require("remark-gfm");
 
-  // console.log("frontmatter", frontmatter);
+  console.log("frontmatter", frontmatter);
   // console.log("toc", toc);
   const content = hydrate(source, { components });
 
