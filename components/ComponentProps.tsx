@@ -1,4 +1,5 @@
 import spec from "data/spec.json";
+import { Badge } from "@supabase/ui";
 
 type ParametersParams = {
   signature: string;
@@ -27,7 +28,7 @@ export default function Parameters({ signature }: ParametersParams) {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Property</th>
             {/* <th>Required</th> */}
             <th>Type</th>
           </tr>
@@ -35,9 +36,13 @@ export default function Parameters({ signature }: ParametersParams) {
         <tbody>
           {moduleProps.map((x) => (
             <tr key={x.name}>
-              <td>{x.name}</td>
+              <td className="PropsTable__Property">
+                <span>{x.name}</span>
+              </td>
               {/* <td>{x.flags.optional ? "true" : "false"}</td> */}
-              <td>{x.type.name}</td>
+              <td className="PropsTable__Type">
+                <Badge color="brand">{x.type.name}</Badge>
+              </td>
             </tr>
           ))}
         </tbody>

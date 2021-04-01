@@ -112,3 +112,17 @@ body {
 .ext-link {
   @apply cursor-pointer text-sm text-gray-300 hover:text-gray-400 dark:text-gray-400 dark:hover:text-white flex items-center space-x-1;
 }
+
+.PropsTable__Property span {
+  @apply bg-gray-100 dark:bg-gray-600 px-1;
+}
+
+th {
+  @apply font-normal dark:text-gray-400;
+}
+
+.sbui-typography-container tbody tr,
+.sbui-typography-container tr {
+  @apply border-b dark:border-gray-600;
+  /* border-bottom-color: #e0e0e0; */
+}
