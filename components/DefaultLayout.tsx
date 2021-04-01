@@ -97,6 +97,16 @@ function DefaultLayout(props: any) {
                   <div className="mt-4">
                     <Menu.Group title="Components" />
                   </div>
+                  <Link href="/components/tabs" as="/components/tabs">
+                    <a>
+                      <Menu.Item>Tabs</Menu.Item>
+                    </a>
+                  </Link>
+                  <Link href="/components/badge" as="/components/badge">
+                    <a>
+                      <Menu.Item>Badge</Menu.Item>
+                    </a>
+                  </Link>
                   <Link href="/components/auth" as="/components/auth">
                     <a>
                       <Menu.Item>Auth</Menu.Item>

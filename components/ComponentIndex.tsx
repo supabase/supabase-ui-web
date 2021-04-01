@@ -119,6 +119,28 @@ import InputNumberMinMax from "../_components/inputnumber/InputNumberMinMax";
 import InputNumberBasicRaw from "!!raw-loader!./../_components/inputnumber/InputNumberBasic";
 import InputNumberMinMaxRaw from "!!raw-loader!./../_components/inputnumber/InputNumberMinMax";
 
+import TabsBasic from "../_components/tabs/TabsBasic";
+import TabsUnderline from "../_components/tabs/TabsUnderline";
+import TabsIcon from "../_components/tabs/TabsIcon";
+import TabsBlock from "../_components/tabs/TabsBlock";
+import TabsScrollable from "../_components/tabs/TabsScrollable";
+import TabsSize from "../_components/tabs/TabsSize";
+import TabsAddOnBefore from "../_components/tabs/TabsAddOnBefore";
+
+import TabsBasicRaw from "!!raw-loader!./../_components/tabs/TabsBasic";
+import TabsUnderlineRaw from "!!raw-loader!./../_components/tabs/TabsUnderline";
+import TabsIconRaw from "!!raw-loader!./../_components/tabs/TabsIcon";
+import TabsBlockRaw from "!!raw-loader!./../_components/tabs/TabsBlock";
+import TabsScrollableRaw from "!!raw-loader!./../_components/tabs/TabsScrollable";
+import TabsSizeRaw from "!!raw-loader!./../_components/tabs/TabsSize";
+import TabsAddOnBeforeRaw from "!!raw-loader!./../_components/tabs/TabsAddOnBefore";
+
+import BadgeBasic from "../_components/badge/BadgeBasic";
+import BadgeDot from "../_components/badge/BadgeDot";
+
+import BadgeBasicRaw from "!!raw-loader!./../_components/badge/BadgeBasic";
+import BadgeDotRaw from "!!raw-loader!./../_components/badge/BadgeDot";
+
 let Components: any = {};
 let RawComponents: any = {};
 
@@ -269,6 +291,32 @@ Components["InputNumberMinMax"] = InputNumberMinMax;
 
 RawComponents["InputNumberBasic"] = InputNumberBasicRaw;
 RawComponents["InputNumberMinMax"] = InputNumberMinMaxRaw;
+
+// Tabs
+
+Components["TabsBasic"] = TabsBasic;
+Components["TabsUnderline"] = TabsUnderline;
+Components["TabsIcon"] = TabsIcon;
+Components["TabsBlock"] = TabsBlock;
+Components["TabsScrollable"] = TabsScrollable;
+Components["TabsSize"] = TabsSize;
+Components["TabsAddOnBefore"] = TabsAddOnBefore;
+
+RawComponents["TabsBasic"] = TabsBasicRaw;
+RawComponents["TabsUnderline"] = TabsUnderlineRaw;
+RawComponents["TabsIcon"] = TabsIconRaw;
+RawComponents["TabsBlock"] = TabsBlockRaw;
+RawComponents["TabsScrollable"] = TabsScrollableRaw;
+RawComponents["TabsSize"] = TabsSizeRaw;
+RawComponents["TabsAddOnBefore"] = TabsAddOnBeforeRaw;
+
+// Badge
+
+Components["BadgeBasic"] = BadgeBasic;
+Components["BadgeDot"] = BadgeDot;
+
+RawComponents["BadgeBasic"] = BadgeBasicRaw;
+RawComponents["BadgeDot"] = BadgeDotRaw;
 
 export default Components;
 export { RawComponents };
