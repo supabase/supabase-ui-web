@@ -1,0 +1,46 @@
+---
+title: Typography
+description: Basic button compoment
+img: "/images/button.svg"
+---
+
+## Installing
+
+Install the component
+
+```cli
+npm install @supabase/ui
+```
+
+## Getting started
+
+Import the component
+
+```js
+@import { Typography } from '@supabase/ui'
+```
+
+This component contains sub components which might be easier to use in variables.
+Alternative import method can be to do the following.
+
+```js
+@import { Typography } from '@supabase/ui'
+
+const { Title, Text, Link } from Typography
+
+<Title level={3}>I am some text</Title>
+<Text>I am some text</Text>
+<Link>I am some link</Link>
+```
+
+## Titles
+
+You can define the type of a button using the `type` prop. There are `primary`, `default`, `secondary`, `outline`, `dashed`, and `text`,
+
+<CodeSample sample="TypographyTitles" v="0" />
+
+## Text
+
+You can define the type of a button using the `type` prop. There are `primary`, `default`, `secondary`, `outline`, `dashed`, and `text`,
+
+<CodeSample sample="TypographyText" v="0" />
