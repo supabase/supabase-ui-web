@@ -2,32 +2,49 @@
 
 ## An open-source UI component library inspired by Tailwind and AntDesign.
 
-Supabase UI is a high level UI component library with a focus on creating beutiful apps quickly and efficiently.
-We designed Supabase UI while using Tailwind CSS utlity classes to handle layouts and grids.
+Supabase UI is a high-level UI component library with a focus on creating beautiful apps quickly and efficiently. 
+Supabase UI is designed to be used with Tailwind CSS utlity classes. 
 
 ## Vision
 
-We have compiled repeatable UI patterns into components that we see in everyday apps that we need to use repeatably.
+We have compiled repetitive UI patterns into components that we use across the Supabase suite of apps and examples. 
+This library gives us a consistent brand, and accelerates our development/prototyping.
 
-We are also implementing Supabase specific components, so that that Supabase can be used quickly and interacted with easily.
+We know is already a large supply of UI libraries available online. This library is primarily to serve Supabase, but we hope that it
+can also be beneficial for apps that are built with Supabase.
+
+For example, we provide full components (like Auth widgets), which you can simply drop into your website. 
+
+Over time, this library will expand to include a broader range of components and customization. By that stage we hope it will be 
+beneficial even to developers outside of the Supabase ecosystem.
 
 ## Key Features
 
 ### Tailwind friendly
 
-We have tried to compile a group of aesthetically pleasing components with design inspiration from existing UI libraries and also Tailwind UI examples.
+We have compiled a group of aesthetically pleasing components with design inspiration from existing UI libraries and Tailwind UI examples.
 
-We also try to allow tailwind css classes be used where nessasary, for example with animations and we strongly encourage you to use a tailwind config with Supabase UI when we release our themeing support.
+We try to allow Tailwind CSS classes be used for animations and we strongly encourage you to use a Tailwind config with Supabase UI.
 
 ### Open source
 
-The whole library is open source, and we are trying to integrate other open source projects into this library if we can.
+Supabase UI is open source, and MIT licensed (fully permissive).
 
-Examples of using open source libraries could be integrating an array of Icon libraries, as well as using libraries to handle design patterns like context menus, toast messages and interactive tables.
+Supabase UI uses libraries which are also permissively licensed, if they are lightweight, modular, and active. This is better for the ecosystem, rather than doing everything ourselves.
+These libraries include:
+
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Hero Icons](https://heroicons.com/)
+- Libraries which handle design patterns like context menus, toast messages and interactive tables. 
+
+### Uncontrolled
+
+All components are designed to be used controlled and uncontrolled. 
+We go to great lengths to ensure you don't need local states for unnecessarily. Instead, we provide callbacks for useful interactions or state changes.
 
 ### Developer experience
 
-We have tried to keep the library fully typed where possible, it is an ongoing effort.
+Supabase UI is fully typed wherever possible (it is an ongoing effort).
 
 Part of the focus has also been on making sure components can be controlled and uncontrolled.
 We are going to some effort in making sure that you don't need to keep local states for unessaary things but rather provide callbacks for useful interactions or state changes.
@@ -40,4 +57,4 @@ We would like to see Supabase UI handle aria and role attributes, focus manageme
 
 ### GitHub
 
-To file issues, request features, and contribute, check out our GitHub.
+To file issues, request features, and contribute, check out our [GitHub](https://github.com/supabase/ui).
