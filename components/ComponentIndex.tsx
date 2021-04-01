@@ -141,6 +141,16 @@ import BadgeDot from "../_components/badge/BadgeDot";
 import BadgeBasicRaw from "!!raw-loader!./../_components/badge/BadgeBasic";
 import BadgeDotRaw from "!!raw-loader!./../_components/badge/BadgeDot";
 
+import CardBasic from "../_components/card/CardBasic";
+import CardCover from "../_components/card/CardCover";
+import CardMeta from "../_components/card/CardMeta";
+import CardHoverable from "../_components/card/CardHoverable";
+
+import CardBasicRaw from "!!raw-loader!./../_components/card/CardBasic";
+import CardCoverRaw from "!!raw-loader!./../_components/card/CardCover";
+import CardMetaRaw from "!!raw-loader!./../_components/card/CardMeta";
+import CardHoverableRaw from "!!raw-loader!./../_components/card/CardHoverable";
+
 let Components: any = {};
 let RawComponents: any = {};
 
@@ -317,6 +327,18 @@ Components["BadgeDot"] = BadgeDot;
 
 RawComponents["BadgeBasic"] = BadgeBasicRaw;
 RawComponents["BadgeDot"] = BadgeDotRaw;
+
+// Card
+
+Components["CardBasic"] = CardBasic;
+Components["CardCover"] = CardCover;
+Components["CardMeta"] = CardMeta;
+Components["CardHoverable"] = CardHoverable;
+
+RawComponents["CardBasic"] = CardBasicRaw;
+RawComponents["CardCover"] = CardCoverRaw;
+RawComponents["CardMeta"] = CardMetaRaw;
+RawComponents["CardHoverable"] = CardHoverableRaw;
 
 export default Components;
 export { RawComponents };

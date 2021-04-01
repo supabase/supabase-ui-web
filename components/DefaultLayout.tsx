@@ -102,6 +102,11 @@ function DefaultLayout(props: any) {
                       <Menu.Item>Tabs</Menu.Item>
                     </a>
                   </Link>
+                  <Link href="/components/card" as="/components/card">
+                    <a>
+                      <Menu.Item>Card</Menu.Item>
+                    </a>
+                  </Link>
                   <Link href="/components/badge" as="/components/badge">
                     <a>
                       <Menu.Item>Badge</Menu.Item>
