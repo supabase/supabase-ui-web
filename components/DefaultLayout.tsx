@@ -1,4 +1,11 @@
-import { IconMoon, IconSun, Menu, Space, Typography } from "@supabase/ui";
+import {
+  Badge,
+  IconMoon,
+  IconSun,
+  Menu,
+  Space,
+  Typography,
+} from "@supabase/ui";
 import Nav from "./Nav";
 import Link from "next/link";
 
@@ -74,8 +81,12 @@ function DefaultLayout(props: any) {
                   />
                 </Link>
               </div>
-              <nav className="mt-5 pt-8 flex-1 bg-white dark:bg-gray-800 space-y-1">
+              <div className="ml-3 mt-6">
+                <Badge>Pre release alpha</Badge>
+              </div>
+              <nav className="pt-6 flex-1 bg-white dark:bg-gray-800 space-y-1">
                 {/* <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" --> */}
+
                 <Menu>
                   <Link href="/">
                     <Menu.Item>Introduction</Menu.Item>
@@ -115,6 +126,14 @@ function DefaultLayout(props: any) {
                   <div className="mt-4">
                     <Menu.Group title="Data input" />
                   </div>
+                  <Link
+                    href="/components/inputnumber"
+                    as="/components/inputnumber"
+                  >
+                    <a>
+                      <Menu.Item>InputNumber</Menu.Item>
+                    </a>
+                  </Link>
                   <Link href="/components/checkbox" as="/components/checkbox">
                     <a>
                       <Menu.Item>Checkbox</Menu.Item>

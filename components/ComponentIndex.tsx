@@ -113,6 +113,12 @@ import SelectErrorRaw from "!!raw-loader!./../_components/select/SelectError";
 import SelectIconRaw from "!!raw-loader!./../_components/select/SelectIcon";
 import SelectOptionGroupRaw from "!!raw-loader!./../_components/select/SelectOptionGroup";
 
+import InputNumberBasic from "../_components/inputnumber/InputNumberBasic";
+import InputNumberMinMax from "../_components/inputnumber/InputNumberMinMax";
+
+import InputNumberBasicRaw from "!!raw-loader!./../_components/inputnumber/InputNumberBasic";
+import InputNumberMinMaxRaw from "!!raw-loader!./../_components/inputnumber/InputNumberMinMax";
+
 let Components: any = {};
 let RawComponents: any = {};
 
@@ -255,6 +261,14 @@ RawComponents["SelectControlled"] = SelectControlledRaw;
 RawComponents["SelectError"] = SelectErrorRaw;
 RawComponents["SelectIcon"] = SelectIconRaw;
 RawComponents["SelectOptionGroup"] = SelectOptionGroupRaw;
+
+// InputNumber
+
+Components["InputNumberBasic"] = InputNumberBasic;
+Components["InputNumberMinMax"] = InputNumberMinMax;
+
+RawComponents["InputNumberBasic"] = InputNumberBasicRaw;
+RawComponents["InputNumberMinMax"] = InputNumberMinMaxRaw;
 
 export default Components;
 export { RawComponents };
