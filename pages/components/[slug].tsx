@@ -77,23 +77,6 @@ export default function Home({ source, frontmatter, toc }: any) {
                 </a>
               </div>
             </div>
-            <a
-              href={
-                'https://www.producthunt.com/posts/supabase-ui?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-supabase-ui'
-              }
-              target="_blank"
-              className="block mb-8"
-            >
-              <img
-                src={
-                  'https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=290768&theme=light'
-                }
-                alt="Supabase UI - React component library for enterprise dashboards | Product Hunt"
-                style={{ width: '166px', height: '36px' }}
-                width={'250'}
-                height={'54'}
-              />
-            </a>
           </Typography.Text>
           {/* <Header img={frontmatter.img} /> */}
           <div className="py-0">
