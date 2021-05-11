@@ -1,5 +1,5 @@
-import { Transition } from "@supabase/ui";
-import { getStaticProps } from "~/pages";
+import { Transition } from '@headlessui/react'
+import { getStaticProps } from '~/pages'
 
 function Nav({ contents, show, setShow }: any) {
   return (
@@ -28,11 +28,7 @@ function Nav({ contents, show, setShow }: any) {
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
       >
-        <div
-          className="fixed inset-0 flex z-40 md:hidden"
-          role="dialog"
-          aria-modal="true"
-        >
+        <div className="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
           {/* // capture close clicks */}
           <div className="absolute h-full w-full" onClick={setShow}></div>
           {/* content of mobile menu */}
@@ -46,7 +42,7 @@ function Nav({ contents, show, setShow }: any) {
         </div>
       </Transition>
     </>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

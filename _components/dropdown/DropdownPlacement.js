@@ -5,39 +5,51 @@ import {
   IconClipboard,
   IconCopy,
   IconTrash,
-  Menu,
-} from "@supabase/ui";
+  Typography,
+} from '@supabase/ui'
 
 export default function DropdownBasic() {
   const Overlay = () => (
-    <Menu>
-      <Menu.Item icon={<IconClipboard />}>Copy</Menu.Item>
-      <Menu.Item icon={<IconCopy />}>Duplicate</Menu.Item>
+    <>
+      <Dropdown.Item icon={<IconClipboard />}>
+        <Typography.Text>Copy</Typography.Text>
+      </Dropdown.Item>
+      <Dropdown.Item icon={<IconCopy />}>
+        <Typography.Text>Duplicate</Typography.Text>
+      </Dropdown.Item>
       <Divider light />
-      <Menu.Item icon={<IconTrash stroke="red" />}>Delete</Menu.Item>
-    </Menu>
-  );
+      <Dropdown.Item icon={<IconTrash stroke="red" />}>
+        <Typography.Text>Delete</Typography.Text>
+      </Dropdown.Item>
+    </>
+  )
 
   return (
     <>
-      <Dropdown placement="bottomCenter" overlay={<Overlay />}>
+      <Dropdown side="bottom" align="center" overlay={<Overlay />}>
         <Button type="outline">Bottom center</Button>
       </Dropdown>
-      <Dropdown placement="bottomLeft" overlay={<Overlay />}>
+      <Dropdown side="bottom" align="end" overlay={<Overlay />}>
         <Button type="outline">Bottom left</Button>
       </Dropdown>
-      <Dropdown placement="bottomRight" overlay={<Overlay />}>
+      <Dropdown side="bottom" align="start" overlay={<Overlay />}>
         <Button type="outline">Bottom right</Button>
       </Dropdown>
-      <Dropdown placement="topCentre" overlay={<Overlay />}>
+      <Dropdown side="top" align="center" overlay={<Overlay />}>
         <Button type="outline">Top center</Button>
       </Dropdown>
-      <Dropdown placement="topLeft" overlay={<Overlay />}>
+      <Dropdown side="top" align="end" overlay={<Overlay />}>
         <Button type="outline">Top left</Button>
       </Dropdown>
-      <Dropdown placement="topRight" overlay={<Overlay />}>
+      <Dropdown side="top" align="start" overlay={<Overlay />}>
         <Button type="outline">Top right</Button>
       </Dropdown>
+      <Dropdown side="right" align="center" overlay={<Overlay />}>
+        <Button type="outline">Right center</Button>
+      </Dropdown>
+      <Dropdown side="left" align="center" overlay={<Overlay />}>
+        <Button type="outline">Left center</Button>
+      </Dropdown>
     </>
-  );
+  )
 }
