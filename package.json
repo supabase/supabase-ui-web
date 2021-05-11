@@ -10,10 +10,11 @@
     "publish": "npm run build && npm run export"
   },
   "dependencies": {
+    "@headlessui/react": "^1.2.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.1.1",
     "@supabase/supabase-js": "^1.7.5",
-    "@supabase/ui": "^0.23.0",
+    "@supabase/ui": "^0.25.0",
     "@types/react-copy-to-clipboard": "^5.0.0",
     "gray-matter": "^4.0.2",
     "markdown-toc": "^1.2.0",

@@ -1,34 +1,41 @@
-import { Button, Divider, Dropdown, Menu } from "@supabase/ui";
+import {
+  Dropdown,
+  Button,
+  Divider,
+  Typography,
+  IconLogOut,
+  IconSettings,
+  IconChevronDown,
+} from '@supabase/ui'
 
 export default function DropdownBasic() {
   return (
     <Dropdown
-      {...args}
       overlay={[
-        <Dropdown.Item>
+        <Dropdown.Misc>
           <Typography.Text>Signed in as </Typography.Text>
           <Typography.Text strong>tom@example.com </Typography.Text>
-        </Dropdown.Item>,
+        </Dropdown.Misc>,
         <Divider light />,
-        <Menu>
-          <Menu.Item doNotCloseOverlay icon={<IconSettings size="tiny" />}>
-            This button will not close dropdown
-          </Menu.Item>
-          <Divider light />
-          <Menu.Item>Something</Menu.Item>
-          <Menu.Item>Something</Menu.Item>
-        </Menu>,
+
+        <Dropdown.Misc icon={<IconSettings size="tiny" />}>
+          <Typography.Text>This button will not close dropdown</Typography.Text>
+        </Dropdown.Misc>,
         <Divider light />,
         <Dropdown.Item>
-          <Button type="default" icon={<IconLogOut />}>
-            Log out
-          </Button>
+          <Typography.Text>Something</Typography.Text>
         </Dropdown.Item>,
+        <Dropdown.Item>
+          <Typography.Text>Something</Typography.Text>
+        </Dropdown.Item>,
+
+        <Divider light />,
+        <Dropdown.Item icon={<IconLogOut />}>Log out</Dropdown.Item>,
       ]}
     >
       <Button type="outline" iconRight={<IconChevronDown />}>
-        Click for dropdown
+        <Typography.Text>Click for dropdown</Typography.Text>
       </Button>
     </Dropdown>
-  );
+  )
 }

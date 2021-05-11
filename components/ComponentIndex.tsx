@@ -56,9 +56,11 @@ import InputTextAreaWithLimitRaw from '!!raw-loader!./../_components/input/Input
 
 import DropdownBasic from '../_components/dropdown/DropdownBasic'
 import DropdownPlacement from '../_components/dropdown/DropdownPlacement'
+import DropdownDoNotClose from '../_components/dropdown/DropdownDoNotClose'
 
 import DropdownBasicRaw from '!!raw-loader!./../_components/dropdown/DropdownBasic'
 import DropdownPlacementRaw from '!!raw-loader!./../_components/dropdown/DropdownPlacement'
+import DropdownDoNotCloseRaw from '!!raw-loader!./../_components/dropdown/DropdownDoNotClose'
 
 import MenuBasic from '../_components/menu/MenuBasic'
 import MenuWithGroups from '../_components/menu/MenuWithGroups'
@@ -237,9 +239,11 @@ RawComponents['InputTextAreaWithLimit'] = InputTextAreaWithLimitRaw
 
 Components['DropdownBasic'] = DropdownBasic
 Components['DropdownPlacement'] = DropdownPlacement
+Components['DropdownDoNotClose'] = DropdownDoNotClose
 
 RawComponents['DropdownBasic'] = DropdownBasicRaw
 RawComponents['DropdownPlacement'] = DropdownPlacementRaw
+RawComponents['DropdownDoNotClose'] = DropdownDoNotCloseRaw
 
 // Menu
 

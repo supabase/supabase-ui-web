@@ -24,15 +24,26 @@ Import the component
 
 Use the children of Dropdown for the trigger element that will open the dropdown. Use `overlay` to insert any react node to show in the dropdown.
 
-For the best experience, use [Menu](/components/menu) and Divider to split up the content and menu inside the Dropdown.
+`Dropdown.Item` is used inside the `overlay` to define clickable options. By clicking on them, they automatically close the Dropdown.
+
+You may also want to use the `Typography` component in `Dropdown.Item` to keep text consistent, and add support for dark/light mode variations.
+
+`Dropdown.Item` also has an `icon` prop in which you can pass any Icon (Docs coming soon).
 
 <CodeSample sample="DropdownBasic" v="0" />
 
 ## Placement
 
-Choose where the dropdown appears with `placement`
+Choose where the dropdown appears with `side` and `align`.
+The dropdown will automatically reposition its self if it collides with the edge of the viewable area.
 
 <CodeSample sample="DropdownPlacement" v="0" />
+
+## Do not close
+
+You can use `Dropdown.Misc` to add an item that isn't part of a menu.
+
+<CodeSample sample="DropdownDoNotClose" v="0" />
 
 ## API Reference
 
