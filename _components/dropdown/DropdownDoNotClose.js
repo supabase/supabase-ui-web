@@ -12,29 +12,25 @@ export default function DropdownBasic() {
   return (
     <Dropdown
       overlay={[
-        <Dropdown.Misc>
-          <Typography.Text>Signed in as </Typography.Text>
-          <Typography.Text strong>tom@example.com </Typography.Text>
-        </Dropdown.Misc>,
-        <Divider light />,
-
         <Dropdown.Misc icon={<IconSettings size="tiny" />}>
-          <Typography.Text>This button will not close dropdown</Typography.Text>
+          <Typography.Text>This will not close dropdown</Typography.Text>
         </Dropdown.Misc>,
         <Divider light />,
         <Dropdown.Item>
-          <Typography.Text>Something</Typography.Text>
+          <Typography.Text>Option one</Typography.Text>
         </Dropdown.Item>,
         <Dropdown.Item>
-          <Typography.Text>Something</Typography.Text>
+          <Typography.Text>Option two</Typography.Text>
         </Dropdown.Item>,
 
         <Divider light />,
-        <Dropdown.Item icon={<IconLogOut />}>Log out</Dropdown.Item>,
+        <Dropdown.Item icon={<IconLogOut />}>
+          <Typography.Text>Log out</Typography.Text>
+        </Dropdown.Item>,
       ]}
     >
       <Button type="outline" iconRight={<IconChevronDown />}>
-        <Typography.Text>Click for dropdown</Typography.Text>
+        Click for dropdown
       </Button>
     </Dropdown>
   )
