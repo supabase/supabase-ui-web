@@ -11,6 +11,9 @@ export default function BadgeBasic() {
       <Badge color="purple">purple</Badge>
       <Badge color="red">red</Badge>
       <Badge color="yellow">yellow</Badge>
+    
+      <Badge size="large">large</Badge>
+      <Badge size="small">small</Badge>
     </>
   );
 }
