@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import fs from 'fs'
 import path from 'path'
 
@@ -37,6 +38,13 @@ export default function Home({ source, frontmatter, toc }: any) {
       <ReactMarkdown plugins={[gfm]}>{toc.content}</ReactMarkdown>
     </div>
   )
+
+  useEffect(() => {
+    if (typeof document !== undefined && document) {
+      const container = document.querySelector('main')
+      container?.scroll(0, 0)
+    }
+  })
 
   return (
     <DefaultLayout>
