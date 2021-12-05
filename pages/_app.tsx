@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: any) {
   // const router = useRouter();
 
   // function telemetry() {
-  //   return post(`https://app.supabase.io/api/telemetry/page`, {
+  //   return post(`https://app.supabase.com/api/telemetry/page`, {
   //     referrer: document.referrer,
   //     title: document.title,
   //   });

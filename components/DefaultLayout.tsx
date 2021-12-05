@@ -139,11 +139,11 @@ function DefaultLayout(props: any) {
         description={site_description}
         openGraph={{
           type: 'website',
-          url: 'https://ui.supabase.io/',
+          url: 'https://ui.supabase.com/',
           site_name: site_title,
           images: [
             {
-              url: `https://ui.supabase.io/og.jpg`,
+              url: `https://ui.supabase.com/og.jpg`,
               width: 800,
               height: 600,
               alt: 'Supabase Og Image',
