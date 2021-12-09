@@ -86,8 +86,8 @@ function DefaultLayout(props: any) {
             <Link href="/">
               <Menu.Item>Introduction</Menu.Item>
             </Link>
-            <Menu.Item>Dark mode setup (coming soon)</Menu.Item>
-            <Menu.Item>Theming (coming soon)</Menu.Item>
+            <Menu.Item style={{pointerEvents: 'none' }}>Dark mode setup (coming soon)</Menu.Item>
+            <Menu.Item style={{pointerEvents: 'none' }}>Theming (coming soon)</Menu.Item>
             <Link href="/license">
               <Menu.Item>License</Menu.Item>
             </Link>
