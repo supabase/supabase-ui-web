@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Supabase UI Website
 
-## Getting Started
+An open source UI component library inspired by Tailwind and AntDesign.
 
-First, run the development server:
+## Vision
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+We have compiled repetitive UI patterns into components that we use across the Supabase suite of apps and examples. This library gives us a consistent brand, and accelerates our development/prototyping.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+We know there is already a large supply of UI libraries available online. This library is primarily to serve Supabase, but we hope that it can also be beneficial for apps that are built with Supabase.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+For example, we provide full components (like Auth widgets), which you can simply drop into your website.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Over time, this library will expand to include a broader range of components and customization. By that stage we hope it will be beneficial even to developers outside of the Supabase ecosystem.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Key Features
 
-## Learn More
+### Tailwind friendly
 
-To learn more about Next.js, take a look at the following resources:
+We have compiled a group of aesthetically pleasing components with design inspiration from existing UI libraries and Tailwind UI examples.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We try to allow Tailwind CSS classes be used for animations and we strongly encourage you to use a Tailwind config with Supabase UI.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Open source
 
-## Deploy on Vercel
+Supabase UI is open source, and MIT licensed (fully permissive).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Supabase UI uses libraries which are also permissively licensed, if they are lightweight, modular, and active. This is better for the ecosystem, rather than doing everything ourselves. These libraries include:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Feather Icons](https://feathericons.com/)
+- Libraries which handle design patterns like context menus, toast messages and interactive tables.
