@@ -10,6 +10,14 @@ import ButtonSizesRaw from '!!raw-loader!./../_components/button/ButtonSizes'
 import ButtonIconsRaw from '!!raw-loader!./../_components/button/ButtonIcons'
 import ButtonBlockRaw from '!!raw-loader!./../_components/button/ButtonBlock'
 
+import IconBasic from '../_components/icon/IconBasic'
+import IconSize from '../_components/icon/IconSize'
+import IconStroke from '../_components/icon/IconStroke'
+
+import IconBasicRaw from '!!raw-loader!./../_components/icon/IconBasic'
+import IconSizeRaw from '!!raw-loader!./../_components/icon/IconSize'
+import IconStrokeRaw from '!!raw-loader!./../_components/icon/IconStroke'
+
 import AuthBasic from '../_components/auth/AuthBasic'
 import AuthSocialProviders from '../_components/auth/AuthSocialProviders'
 
@@ -350,6 +358,16 @@ Components['BadgeDot'] = BadgeDot
 
 RawComponents['BadgeBasic'] = BadgeBasicRaw
 RawComponents['BadgeDot'] = BadgeDotRaw
+
+// Icon
+
+Components['IconBasic'] = IconBasic
+Components['IconSize'] = IconSize
+Components['IconStroke'] = IconStroke
+
+RawComponents['IconBasic'] = IconBasicRaw
+RawComponents['IconSize'] = IconSizeRaw
+RawComponents['IconStroke'] = IconStrokeRaw
 
 // Card
 
