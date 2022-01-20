@@ -77,7 +77,7 @@ function DefaultLayout(props: any) {
               <a className="ext-link" href="https://github.com/supabase/ui" target="_blank">
                 <span>GitHub</span> <IconGitHub size="tiny" />
               </a>
-              <a className="ext-link" href="https://twitter.com/supabase_io" target="_blank">
+              <a className="ext-link" href="https://twitter.com/supabase" target="_blank">
                 <span>Follow</span> <IconTwitter size="tiny" />
               </a>
               <a className="ext-link" href="https://supabase.com" target="_blank">
@@ -153,8 +153,8 @@ function DefaultLayout(props: any) {
           ],
         }}
         twitter={{
-          handle: '@supabase_io',
-          site: '@supabase_io',
+          handle: '@supabase',
+          site: '@supabase',
           cardType: 'summary_large_image',
         }}
       />
