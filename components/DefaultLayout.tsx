@@ -79,8 +79,8 @@ function DefaultLayout(props: any) {
               <a className="ext-link" href="https://twitter.com/supabase_io" target="_blank">
                 <span>Follow</span> <IconTwitter size="tiny" />
               </a>
-              <a className="ext-link" href="https://supabase.io" target="_blank">
-                <span>supabase.io</span>
+              <a className="ext-link" href="https://supabase.com" target="_blank">
+                <span>supabase.com</span>
               </a>
             </div>
             <Link href="/">
@@ -139,11 +139,11 @@ function DefaultLayout(props: any) {
         description={site_description}
         openGraph={{
           type: 'website',
-          url: 'https://ui.supabase.io/',
+          url: 'https://ui.supabase.com/',
           site_name: site_title,
           images: [
             {
-              url: `https://ui.supabase.io/og.jpg`,
+              url: `https://ui.supabase.com/og.jpg`,
               width: 800,
               height: 600,
               alt: 'Supabase Og Image',
