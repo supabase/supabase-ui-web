@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   Badge,
   Button,
@@ -95,13 +96,14 @@ function DefaultLayout(props: any) {
             {Object.values(MenuData).map((menu: any, i) => {
               const title = Object.keys(MenuData)[i]
               return (
-                <>
+                <Fragment key={title}>
                   <div className="mt-4">
                     <Menu.Group title={title} />
                   </div>
-                  {menu.map((menu: any) => {
+                  {menu.map((menu: any, k: any) => {
                     return (
                       <Link
+                        key={k}
                         href={`/components/${menu.toLowerCase()}`}
                         as={`/components/${menu.toLowerCase()}`}
                       >
@@ -111,7 +113,7 @@ function DefaultLayout(props: any) {
                       </Link>
                     )
                   })}
-                </>
+                </Fragment>
               )
             })}
           </Menu>
