@@ -31,7 +31,7 @@ export default function TypographyText() {
       <br />
       <Typography.Text strong>Supabase UI (strong)</Typography.Text>
       <br />
-      <Typography.Link href="https://supabase.io" target="_blank">
+      <Typography.Link href="https://supabase.com" target="_blank">
         Supabase (Link)
       </Typography.Link>
     </>

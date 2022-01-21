@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   Badge,
   Button,
@@ -76,18 +77,18 @@ function DefaultLayout(props: any) {
               <a className="ext-link" href="https://github.com/supabase/ui" target="_blank">
                 <span>GitHub</span> <IconGitHub size="tiny" />
               </a>
-              <a className="ext-link" href="https://twitter.com/supabase_io" target="_blank">
+              <a className="ext-link" href="https://twitter.com/supabase" target="_blank">
                 <span>Follow</span> <IconTwitter size="tiny" />
               </a>
-              <a className="ext-link" href="https://supabase.io" target="_blank">
-                <span>supabase.io</span>
+              <a className="ext-link" href="https://supabase.com" target="_blank">
+                <span>supabase.com</span>
               </a>
             </div>
             <Link href="/">
               <Menu.Item>Introduction</Menu.Item>
             </Link>
-            <Menu.Item>Dark mode setup (coming soon)</Menu.Item>
-            <Menu.Item>Theming (coming soon)</Menu.Item>
+            <Menu.Item style={{pointerEvents: 'none' }}>Dark mode setup (coming soon)</Menu.Item>
+            <Menu.Item style={{pointerEvents: 'none' }}>Theming (coming soon)</Menu.Item>
             <Link href="/license">
               <Menu.Item>License</Menu.Item>
             </Link>
@@ -95,13 +96,14 @@ function DefaultLayout(props: any) {
             {Object.values(MenuData).map((menu: any, i) => {
               const title = Object.keys(MenuData)[i]
               return (
-                <>
+                <Fragment key={title}>
                   <div className="mt-4">
                     <Menu.Group title={title} />
                   </div>
-                  {menu.map((menu: any) => {
+                  {menu.map((menu: any, k: any) => {
                     return (
                       <Link
+                        key={k}
                         href={`/components/${menu.toLowerCase()}`}
                         as={`/components/${menu.toLowerCase()}`}
                       >
@@ -111,7 +113,7 @@ function DefaultLayout(props: any) {
                       </Link>
                     )
                   })}
-                </>
+                </Fragment>
               )
             })}
           </Menu>
@@ -139,11 +141,11 @@ function DefaultLayout(props: any) {
         description={site_description}
         openGraph={{
           type: 'website',
-          url: 'https://ui.supabase.io/',
+          url: 'https://ui.supabase.com/',
           site_name: site_title,
           images: [
             {
-              url: `https://ui.supabase.io/og.jpg`,
+              url: `https://ui.supabase.com/og.jpg`,
               width: 800,
               height: 600,
               alt: 'Supabase Og Image',
@@ -151,8 +153,8 @@ function DefaultLayout(props: any) {
           ],
         }}
         twitter={{
-          handle: '@supabase_io',
-          site: '@supabase_io',
+          handle: '@supabase',
+          site: '@supabase',
           cardType: 'summary_large_image',
         }}
       />

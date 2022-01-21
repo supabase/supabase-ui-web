@@ -9,7 +9,7 @@ export default function RadioGrouped() {
       descriptionText="You can also show label hint text here"
     >
       <Radio
-        label="Frist Radio"
+        label="First Radio"
         description="The value of this Radio is controlled by a react state"
       />
       <Radio

@@ -29,7 +29,7 @@ export default function SidePanelFooterCustom() {
             <Button danger icon={<IconTrash />}>
               Delete
             </Button>
-            <Badge color="red">Excercise caution</Badge>
+            <Badge color="red">Exercise caution</Badge>
           </Space>,
         ]}
       >

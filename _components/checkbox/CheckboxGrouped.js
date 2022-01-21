@@ -10,7 +10,7 @@ export default function CheckboxGrouped() {
         descriptionText="You can also show label hint text here"
       >
         <Checkbox
-          label="Frist checkbox"
+          label="First checkbox"
           description="The value of this checkbox is controlled by a react state"
         />
         <Checkbox
