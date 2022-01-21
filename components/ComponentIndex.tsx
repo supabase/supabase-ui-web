@@ -20,9 +20,11 @@ import IconStrokeRaw from '!!raw-loader!./../_components/icon/IconStroke'
 
 import AuthBasic from '../_components/auth/AuthBasic'
 import AuthSocialProviders from '../_components/auth/AuthSocialProviders'
+import OnlyAuthSocialProviders from '../_components/auth/OnlyAuthSocialProviders'
 
 import AuthBasicRaw from '!!raw-loader!./../_components/auth/AuthBasic'
 import AuthSocialProvidersRaw from '!!raw-loader!./../_components/auth/AuthSocialProviders'
+import OnlyAuthSocialProvidersRaw from '!!raw-loader!./../_components/auth/OnlyAuthSocialProviders'
 
 import CheckboxBasic from '../_components/checkbox/CheckboxBasic'
 import CheckboxControlled from '../_components/checkbox/CheckboxControlled'
@@ -199,9 +201,11 @@ RawComponents['ButtonBlock'] = ButtonBlockRaw
 
 Components['AuthBasic'] = AuthBasic
 Components['AuthSocialProviders'] = AuthSocialProviders
+Components['OnlyAuthSocialProviders'] = OnlyAuthSocialProviders
 
 RawComponents['AuthBasic'] = AuthBasicRaw
 RawComponents['AuthSocialProviders'] = AuthSocialProvidersRaw
+RawComponents['OnlyAuthSocialProviders'] = OnlyAuthSocialProvidersRaw
 
 // Checkbox
 
