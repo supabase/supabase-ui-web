@@ -13,10 +13,12 @@ import ButtonBlockRaw from '!!raw-loader!./../_components/button/ButtonBlock'
 import IconBasic from '../_components/icon/IconBasic'
 import IconSize from '../_components/icon/IconSize'
 import IconStroke from '../_components/icon/IconStroke'
+import { IconMail } from '@supabase/ui' // We need to import the icon here aswell, otherwise it will not work in the components above.
 
 import IconBasicRaw from '!!raw-loader!./../_components/icon/IconBasic'
 import IconSizeRaw from '!!raw-loader!./../_components/icon/IconSize'
 import IconStrokeRaw from '!!raw-loader!./../_components/icon/IconStroke'
+import { IconMail as IconMailRaw } from '@supabase/ui' // We need to import the icon here aswell, otherwise it will not work in the components above.
 
 import AuthBasic from '../_components/auth/AuthBasic'
 import AuthSocialProviders from '../_components/auth/AuthSocialProviders'
@@ -368,10 +370,12 @@ RawComponents['BadgeDot'] = BadgeDotRaw
 Components['IconBasic'] = IconBasic
 Components['IconSize'] = IconSize
 Components['IconStroke'] = IconStroke
+Components['IconMail'] = IconMail
 
 RawComponents['IconBasic'] = IconBasicRaw
 RawComponents['IconSize'] = IconSizeRaw
 RawComponents['IconStroke'] = IconStrokeRaw
+RawComponents['IconMail'] = IconMailRaw
 
 // Card
 
