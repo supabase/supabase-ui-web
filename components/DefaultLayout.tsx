@@ -31,7 +31,7 @@ function DefaultLayout(props: any) {
     const prefersColorScheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches).toString()
     if (previousVisit !== prefersColorScheme) {
       previousVisit = prefersColorScheme
-      localStorage.setItem('supabaseDarkMode', (prefersColorScheme).toString())
+      localStorage.setItem('supabaseDarkMode', prefersColorScheme)
     }
     const isDarkMode = previousVisit == null ? darkMode : previousVisit == 'true'
     setDarkMode(isDarkMode)
