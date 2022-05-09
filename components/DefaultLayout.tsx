@@ -28,7 +28,9 @@ function DefaultLayout(props: any) {
 
   useEffect(() => {
     const previousVisit = localStorage.getItem('supabaseDarkMode')
-    const isDarkMode = previousVisit == null ? darkMode : previousVisit == 'true'
+    const prefersColorScheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches).toString()
+    if (previousVisit !== prefersColorScheme) localStorage.setItem('supabaseDarkMode', prefersColorScheme)
+    const isDarkMode = prefersColorScheme == null ? darkMode : prefersColorScheme == 'true'
     setDarkMode(isDarkMode)
     document.documentElement.className = isDarkMode ? 'dark' : ''
   }, [])
