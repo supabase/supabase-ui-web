@@ -3,9 +3,11 @@
 ---
 
 Supabase UI is being deprecated.
-We are moving the components to the main mono repo at github.com/supabase/supabase.
+We are moving the components to the main mono repo at [github.com/supabase/supabase](http://github.com/supabase/supabase).
 
-The auth component has been moved to it's own repo and package. github.com/supabase-community/auth-ui. You can also read the docs for auth ui here.
+This website will probably be removed/taken down in preference for a storybook documentation site.
+
+The auth component has been moved to it's own repo and package. [github.com/supabase-community/auth-ui](https://github.com/supabase-community/auth-ui). You can also read the docs for auth ui here.
 
 ---
 
