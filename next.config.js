@@ -6,7 +6,7 @@ module.exports = withMDX({
   async redirects() {
     return [
       {
-        source: '/*',
+        source: '*',
         destination: 'https://supabase.com/docs/guides/auth/auth-helpers/auth-ui',
         permanent: true,
         basePath: false,
