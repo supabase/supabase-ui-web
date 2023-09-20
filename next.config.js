@@ -11,6 +11,12 @@ module.exports = withMDX({
         permanent: true,
         basePath: false,
       },
+      {
+        source: '/components/:slug*',
+        destination: 'https://supabase.com/docs/guides/auth/auth-helpers/auth-ui',
+        permanent: true,
+        basePath: false,
+      },
     ]
   },
 })
