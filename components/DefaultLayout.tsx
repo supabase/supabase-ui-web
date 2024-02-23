@@ -1,5 +1,6 @@
-import { Fragment } from "react";
+import { Fragment } from 'react'
 import {
+  Alert,
   Badge,
   Button,
   Divider,
@@ -87,8 +88,8 @@ function DefaultLayout(props: any) {
             <Link href="/">
               <Menu.Item>Introduction</Menu.Item>
             </Link>
-            <Menu.Item style={{pointerEvents: 'none' }}>Dark mode setup (coming soon)</Menu.Item>
-            <Menu.Item style={{pointerEvents: 'none' }}>Theming (coming soon)</Menu.Item>
+            <Menu.Item style={{ pointerEvents: 'none' }}>Dark mode setup (coming soon)</Menu.Item>
+            <Menu.Item style={{ pointerEvents: 'none' }}>Theming (coming soon)</Menu.Item>
             <Link href="/license">
               <Menu.Item>License</Menu.Item>
             </Link>
@@ -201,7 +202,18 @@ function DefaultLayout(props: any) {
           </div>
           <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabIndex={0}>
             <div className="py-6">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">{props.children}</div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                <Alert title="Supabase UI is deprecated" withIcon variant="warning">
+                  <a
+                    className="inline! ext-link"
+                    href="https://github.com/supabase/ui/blob/master/README.md"
+                    target="_blank"
+                  >
+                    Read more about this here
+                  </a>
+                </Alert>
+                {props.children}
+              </div>
             </div>
           </main>
         </div>
