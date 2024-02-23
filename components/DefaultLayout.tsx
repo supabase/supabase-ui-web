@@ -209,7 +209,7 @@ function DefaultLayout(props: any) {
                     href="https://github.com/supabase/ui/blob/master/README.md"
                     target="_blank"
                   >
-                    More information here.
+                    Read more about this here
                   </a>
                 </Alert>
                 {props.children}
